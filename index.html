@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="ru">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Alibra</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Template Basic Images Start -->
 	<meta property="og:image" content="path/to/image.jpg">
 	<link rel="icon" href="img/favicon/favicon.ico">
 	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
-	<!-- Template Basic Images End -->
-	
-	<!-- Custom Browsers Color Start -->
-	<meta name="theme-color" content="#000">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 	<!-- Custom Browsers Color End -->
 	<link rel="stylesheet" href="css/style.css">
 
@@ -21,15 +21,98 @@
 <body>
 	<div class="wrapper">
 		<header class="header">
-			
+			<div class="container container--full flex justify-between align-center">
+				<div class="header__left flex align-center">
+					<a href="#" class="logo">
+						<img src="img/logo.png" alt="">
+					</a>
+					<span class="header__banner">
+						<img src="img/mini_banner.png" alt="">
+					</span>
+				</div>
+				<div class="header__right">
+					<div class="header__right__top flex align-center">
+						<ul class="menu">
+							<li><a href="#">Взрослым</a></li>
+							<li><a href="#">Детям</a></li>
+							<li><a href="#">Компаниям</a></li>
+							<li><a href="#">Платформа</a></li>
+							<li><a href="#">Приложение</a></li>
+							<li><a href="#">Блог</a></li>
+							<li><a href="#">Акции</a></li>
+						</ul>
+						<a href="#" class="lk">
+							<span class="icon">
+								<svg>
+									<use xlink:href="#icon-user"></use>
+								</svg>
+							</span>
+							Кабинет
+						</a>
+					</div>
+					<div class="header__right__bottom">
+						<a href="tel:88005339157" class="number">8 800 533 91 57</a>
+					</div>					
+				</div>
+			</div>
 		</header>
 		<main class="main">
-			
+			<div class="container">
+				<div class="first-screen">
+					<div class="first-screen__left">
+						<div class="top-title">
+							Авторская методика с гарантией результатов
+						</div>
+						<div class="title h1 font-700">
+							<span class="red">Скидка 50% </span><br />
+							и Разговорный клуб<br />
+							с носителем в подарок!
+						</div>
+						<div class="subtitle">
+							Только до 24 января <br />
+							Дарим промокод для уверенного английского!
+						</div>
+						<a href="#" class="btn btn--red btn--lg">Подробнее</a>
+					</div>
+					<div class="first-screen__right flex justify-center align-center">
+						<img src="img/tablet_and_headphones.png" alt="Скидка и подарок">
+					</div>
+				</div>
+				<!-- /.first-screen -->
+
+				<div class="callback">
+					<form action="#">
+						<div class="callback-form flex justify-center align-center">
+							<div class="input-wrapper">
+								<input type="tel" placeholder="Введите телефон">
+							</div>
+							<input type="submit" value="Попробовать бесплатно" class="btn btn--red">
+						</div>
+						<div class="form-notice">
+							Запишитесь на бесплатный пробный урок и посмотрите как проходит обучение
+						</div>
+					</form>
+				</div>
+			</div>
 		</main>
-		<footer class="footer"></footer>
+		<footer class="footer">
+
+		</footer>
+
+		<!-- SVG спрайт с symbols -->
+		<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+			<symbol id="icon-user" viewBox="0 0 24 24">
+				<circle cx="12" cy="7" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+				<path d="M4 21v-2c0-2.2 1.8-4 4-4h8c2.2 0 4 1.8 4 4v2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+			</symbol>
+			
+			<symbol id="icon-star" viewBox="0 0 36 44">
+				<path d="M35.5271 21.9978C21.8049 24.6669 20.0761 26.8257 17.9465 43.9956C15.8134 26.83 14.0846 24.6669 0.362305 21.9978C14.0846 19.3331 15.8134 17.17 17.943 0C20.0761 17.17 21.8014 19.3331 35.5237 21.9978H35.5271Z" fill="currentColor"/>
+			</symbol>
+		</svg>
 	</div><!-- end wrapper -->
 
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="js/slick.min.js"></script>
 <script src="js/common.js"></script>
 </body>
