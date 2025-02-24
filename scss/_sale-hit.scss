@@ -1,0 +1,73 @@
+.sale-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+}
+.sale-hit {
+    .block-title {
+        margin-bottom: 8rem;
+    }
+}
+.sale-item {
+    border-radius: 40px;
+    padding: 3rem 4rem;
+
+    &.popular {
+        background: #666C7E;
+        color: #fff;
+
+        .badge {
+            min-width: 380px;
+            justify-content: flex-start;
+        }
+    }
+
+    &.spoken,
+    &.work {
+        background: #E2E8F0;
+    }
+
+    &.individual {
+        background: #F0EFEB;
+    }
+    &.intensive {
+        background: #F1F3F5;
+    }
+
+    &:first-child {
+        grid-column: 1 / -1; /* Первый блок на всю ширину */
+    }
+
+    &__content {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        height: 100%;
+
+        &__top {
+            margin-bottom: 2rem;
+            width: 100%;
+        }
+        .h4 {
+            margin-bottom: 2rem;
+        }
+    }
+
+    .cta-block {
+        display: flex;
+        gap: 2rem;
+        margin-top: auto;
+    }
+    .badge + .cta-block {
+        margin-top: 2rem;
+    }
+    .list {
+        margin-bottom: 2rem;
+    }
+}
+.sale-notice {
+    color: var(--red);
+    line-height: 1.3;
+    font-weight: 500;
+}
