@@ -1,0 +1,40 @@
+.garant {
+    margin-bottom: 4rem;
+    &__top {
+        margin-bottom: 3rem;
+        .subtitle {
+            margin-top: 1rem;
+            font-size: 4.1rem;
+        }
+    }
+
+    &-list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 3rem;
+        align-items: flex-end;
+        margin-bottom: 8rem;
+
+        &__item {
+            border-radius: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            font-size: 2.8rem;
+            line-height: 1.25;
+            font-weight: 600;
+            &:not(:first-child) {
+                padding: 4rem;
+                min-height: 37.5rem;
+            }
+        }
+    }
+
+    .btn-block {
+        .btn {
+            width: 100%;
+            max-width: 430px;
+        }
+    }
+}

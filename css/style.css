@@ -124,6 +124,10 @@ END RESETT CSS
   --text-black: #000;
   --red: #EB1E32;
   --border-color: #E0E0E0;
+  --pink: #FFEFEF;
+  --light-gray: #EAECEE;
+  --slate-gray: #747B8F;
+  --light-blue-gray: #D4DDE9;
 }
 
 html, body {
@@ -197,6 +201,10 @@ b, strong, .font-700 {
   color: var(--text-gray);
 }
 
+.text-white {
+  color: #fff;
+}
+
 .wrapper {
   height: 100%;
   display: flex;
@@ -249,6 +257,22 @@ b, strong, .font-700 {
   color: var(--red);
 }
 
+.pink-bg {
+  background: var(--pink);
+}
+
+.light-gray-bg {
+  background: var(--light-gray);
+}
+
+.slate-gray-bg {
+  background: var(--slate-gray);
+}
+
+.light-blue-gray-bg {
+  background: var(--light-blue-gray);
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -274,6 +298,10 @@ b, strong, .font-700 {
 .btn--lg {
   font-size: 2.6rem;
   height: 8rem;
+}
+.btn--sm {
+  font-size: 1.8rem;
+  height: 4rem;
 }
 .btn--red {
   background: var(--red);
@@ -311,6 +339,10 @@ b, strong, .font-700 {
   background: #D9D9D9;
   color: var(--red);
 }
+.badge--dark {
+  background: #747B8F;
+  color: #fff;
+}
 .badge .icon {
   width: 2em;
   height: 2em;
@@ -323,6 +355,7 @@ b, strong, .font-700 {
 
 .block {
   margin-top: 12rem;
+  margin-bottom: 4rem;
 }
 .block-title {
   text-align: center;
@@ -739,6 +772,9 @@ b, strong, .font-700 {
 .sale-item.intensive {
   background: #F1F3F5;
 }
+.sale-item.child {
+  background: #FFF9D4;
+}
 .sale-item:first-child {
   grid-column: 1/-1; /* Первый блок на всю ширину */
 }
@@ -774,4 +810,264 @@ b, strong, .font-700 {
   font-weight: 500;
 }
 
+.sale-badge-block {
+  text-align: right;
+  margin: 4rem 0;
+}
+.sale-badge-block .badge {
+  height: 7rem;
+  padding-right: 4rem;
+  position: relative;
+}
+.sale-badge-block .badge::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  transform: translate(55%, -50%) rotate(45deg);
+  height: 5.3rem;
+  background: #D9D9D9;
+  aspect-ratio: 1;
+  border-radius: 7px;
+  z-index: -1;
+}
+.sale-badge-block .badge .icon {
+  width: 3.7rem;
+  height: 5.5rem;
+  margin-right: 3rem;
+}
+
+.garant {
+  margin-bottom: 4rem;
+}
+.garant__top {
+  margin-bottom: 3rem;
+}
+.garant__top .subtitle {
+  margin-top: 1rem;
+  font-size: 4.1rem;
+}
+.garant-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+  align-items: flex-end;
+  margin-bottom: 8rem;
+}
+.garant-list__item {
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 2.8rem;
+  line-height: 1.25;
+  font-weight: 600;
+}
+.garant-list__item:not(:first-child) {
+  padding: 4rem;
+  min-height: 37.5rem;
+}
+.garant .btn-block .btn {
+  width: 100%;
+  max-width: 430px;
+}
+
+.success .block-title {
+  margin-bottom: 6rem;
+}
+.success__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+.success__list__item {
+  border-radius: 40px;
+  min-height: 32rem;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.success__list__item:last-child {
+  grid-column: 1/-1;
+}
+.success__list__item .text {
+  font-size: 2.8rem;
+  line-height: 1.25;
+}
+.success__list__item .text-md {
+  font-size: 2.5rem;
+  line-height: 1.8;
+}
+.success__list__item .text-sm {
+  font-size: 2.2rem;
+  line-height: 1.4;
+}
+.success__list__item .img {
+  margin-bottom: 2rem;
+}
+
+.item-body {
+  display: flex;
+  justify-content: space-between;
+}
+.item-body__left {
+  width: 57%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.item-body__left .btn {
+  padding-left: 3rem;
+  padding-right: 3rem;
+  margin-top: 2rem;
+}
+.item-body__right {
+  width: 40%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.item-body__right img {
+  border-radius: 25px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.item-body .best-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 3rem;
+  height: 6rem;
+  border-radius: 7px;
+  border: 1px solid var(--red);
+  color: var(--text-black);
+  font-size: 2.8rem;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.video {
+  margin-bottom: 4rem;
+}
+.video .block-title {
+  margin-bottom: 4rem;
+}
+
+.bonus {
+  margin-bottom: 4rem;
+}
+.bonus .block-title {
+  margin-bottom: 4rem;
+}
+.bonus__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+}
+.bonus__list__item {
+  border-radius: 40px;
+  padding: 3rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.bonus__list__item .title {
+  font-size: 2.8rem;
+  line-height: 1.25;
+  font-weight: 700;
+}
+.bonus__list__item .text {
+  font-size: 1.8rem;
+  line-height: 1.34;
+}
+
+.item__body {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+.item__body__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 60%;
+}
+.item__body__left .text {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+}
+.item__body__right {
+  width: 40%;
+  display: flex;
+  align-items: center;
+}
+.item__body .btn {
+  margin-top: 2rem;
+}
+
+.review .block-title {
+  margin-bottom: 4rem;
+}
+
+.review-block {
+  border-radius: 40px;
+  padding: 3rem;
+}
+
+.temp-img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 30px;
+}
+
 /*Footer*/
+.footer {
+  margin-top: 12rem;
+  padding-top: 7rem;
+  padding-bottom: 20rem;
+  border-top: 1px solid var(--border-color);
+}
+.footer-menu {
+  color: var(--slate-gray);
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-menu__column {
+  width: 18%;
+}
+.footer-menu__title {
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+.footer-menu__item:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.footer-menu__item a:hover {
+  color: var(--text-black);
+}
+
+.footer-app {
+  border: 1px solid var(--border-color);
+  border-radius: 7px;
+  padding: 2rem;
+}
+.footer-app__title {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+.footer-app__text {
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 1em;
+  line-height: 1.3;
+}

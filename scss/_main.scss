@@ -3,6 +3,10 @@
 	--text-black: #000;
 	--red: #EB1E32;
 	--border-color: #E0E0E0;
+	--pink: #FFEFEF;
+	--light-gray: #EAECEE;
+	--slate-gray: #747B8F;
+	--light-blue-gray: #D4DDE9;
 }
 html, body{
 	min-height: 100%;
@@ -59,6 +63,9 @@ b, strong, .font-700{
 .text-grey {
 	color: var(--text-gray);
 }
+.text-white {
+	color: #fff;
+}
 .wrapper{
 	height: 100%;
 	display: flex;
@@ -102,6 +109,18 @@ b, strong, .font-700{
 .red {
 	color: var(--red)
 }
+.pink-bg {
+	background: var(--pink)
+}
+.light-gray-bg {
+	background: var(--light-gray)
+}
+.slate-gray-bg {
+	background: var(--slate-gray)
+}
+.light-blue-gray-bg {
+	background: var(--light-blue-gray)
+}
 
 .btn {
 	display: inline-flex;
@@ -127,6 +146,10 @@ b, strong, .font-700{
 	&--lg {
 		font-size: 2.6rem;
 		height: 8rem;
+	}
+	&--sm {
+		font-size: 1.8rem;
+		height: 4rem;
 	}
 
 	&--red {
@@ -165,6 +188,10 @@ b, strong, .font-700{
 		background: #D9D9D9;
 		color: var(--red);
 	}
+	&--dark {
+		background: #747B8F;
+		color: #fff;
+	}
 	.icon {
 		width: 2em;
 		height: 2em;
@@ -178,6 +205,7 @@ b, strong, .font-700{
 
 .block {
 	margin-top: 12rem;
+	margin-bottom: 4rem;
 
 	&-title {
 		text-align: center;
