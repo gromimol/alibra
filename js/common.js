@@ -17,4 +17,12 @@ $(document).ready(function() {
         }
       }
     });
+
+    $('.burger').on('click', function() {
+      $('.mobile-menu').addClass('active')
+    })
+
+    $('.close-menu').on('click', function() {
+      $('.mobile-menu').removeClass('active')
+    })
   });
