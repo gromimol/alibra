@@ -40,3 +40,19 @@ $(document).ready(function() {
       $('.feedback-modal').removeClass('active')
     })
   });
+
+  document.getElementById('videoPlaceholder').addEventListener('click', function() {
+    // Создаем iframe с видео
+    const iframe = document.createElement('iframe');
+    iframe.src = "https://vk.com/video_ext.php?oid=-9094688&id=456239407&hd=2";
+    iframe.width = "100%";
+    iframe.height = "400";
+    iframe.allow = "autoplay; encrypted-media; fullscreen; picture-in-picture;";
+    iframe.frameBorder = "0";
+    iframe.allowFullscreen = true;
+    
+    // Заменяем заглушку на видео
+    document.getElementById('videoContainer').appendChild(iframe);
+    document.getElementById('videoPlaceholder').style.display = 'none';
+    document.getElementById('videoContainer').style.display = 'block';
+});
