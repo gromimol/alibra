@@ -25,8 +25,8 @@
 				<div class="header__left flex align-center">
 					<a href="#" class="logo">
 						<picture>
-						  <source media="(max-width: 767px)" srcset="img/logo_mobile.png">
-						  <img src="img/logo.png" alt="Alibra">
+						  <source media="(max-width: 767px)" srcset="img/logo_mobile.svg">
+						  <img src="img/logo.svg" alt="Alibra">
 						</picture>
 					</a>
 					<span class="header__banner">
@@ -161,7 +161,7 @@
 							<span class="hide-on-phone">Только до 24 января</span> <br />
 							Дарим промокод для уверенного английского!
 						</div>
-						<div class="for-mobile">
+						<div class="show-on-phone">
 							<img src="img/tablet_and_headphones_mobile.png" alt="Скидка и подарок">
 						</div>
 						<span class="show-on-phone">Только до 24 января</span>
@@ -234,7 +234,7 @@
 								</ul>
 								<div class="cta-block flex">
 									<a href="#" class="btn btn--outline btn--white">Подробнее</a>
-									<a href="#" class="btn btn--red">Оставить заявку</a>
+									<a href="#" class="btn btn--red js--feedback">Оставить заявку</a>
 									<div class="badge badge--white">
 										<span class="icon">
 											<svg>
@@ -278,7 +278,7 @@
 								</ul>
 								<div class="cta-block flex">
 									<a href="#" class="btn btn--outline btn--grey">Подробнее</a>
-									<a href="#" class="btn btn--red">Оставить заявку</a>
+									<a href="#" class="btn btn--red js--feedback">Оставить заявку</a>
 								</div>
 							</div>
 						</div>
@@ -310,7 +310,7 @@
 								</ul>
 								<div class="cta-block flex">
 									<a href="#" class="btn btn--outline btn--grey">Подробнее</a>
-									<a href="#" class="btn btn--red">Оставить заявку</a>
+									<a href="#" class="btn btn--red  js--feedback">Оставить заявку</a>
 								</div>
 							</div>
 						</div>
@@ -358,7 +358,7 @@
 								</div>
 								<div class="cta-block flex">
 									<a href="#" class="btn btn--outline btn--grey">Подробнее</a>
-									<a href="#" class="btn btn--red">Оставить заявку</a>
+									<a href="#" class="btn btn--red  js--feedback">Оставить заявку</a>
 								</div>
 							</div>
 						</div>
@@ -391,7 +391,7 @@
 								</ul>
 								<div class="cta-block flex">
 									<a href="#" class="btn btn--outline btn--grey">Подробнее</a>
-									<a href="#" class="btn btn--red">Оставить заявку</a>
+									<a href="#" class="btn btn--red js--feedback">Оставить заявку</a>
 								</div>
 							</div>
 						</div>
@@ -437,7 +437,7 @@
 								</ul>
 								<div class="cta-block flex">
 									<a href="#" class="btn btn--outline btn--grey">Подробнее</a>
-									<a href="#" class="btn btn--red">Оставить заявку</a>
+									<a href="#" class="btn btn--red js--feedback">Оставить заявку</a>
 								</div>
 							</div>
 							<div class="sale-item__img">
@@ -730,6 +730,78 @@
 				  </div>
 			</div>
 		</footer>
+		<div id="overlay"></div>
+		<div class="feedback-modal">
+			<div class="feedback-modal__content">
+				<span class="close">
+					<svg width="33" height="28" viewBox="0 0 33 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<line x1="1.1642" y1="0.81148" x2="32.1642" y2="27.8115" stroke="#EB1E32" stroke-width="1"/>
+						<line y1="-0.25" x2="41.1096" y2="-0.25" transform="matrix(-0.754082 0.656781 0.656781 0.754082 32 1)" stroke="#EB1E32" stroke-width="1"/>
+					</svg>						
+				</span>
+				<div class="feedback-modal__left">
+					<div class="modal-title">
+						Получите <span class="red">индивидуальное предложение</span>
+					</div>
+					<ul class="feedback-modal__description">
+						<li>
+							<span class="icon"><img src="img/feedback_icons/level.png" alt=""></span>
+							<div class="text">Определим уровень ваших знаний</div>
+						</li>
+						<li>
+							<span class="icon"><img src="img/feedback_icons/format.png" alt=""></span>
+							<div class="text">Выберем удобный формат обучения</div>
+						</li>
+						<li>
+							<span class="icon"><img src="img/feedback_icons/goal.png" alt=""></span>
+							<div class="text">Подберем курс под ваши цели</div>
+						</li>
+					</ul>
+				</div>
+				<div class="feedback-modal__right">
+					<div class="modal-title">
+						Оставьте контактные данные<br /> и мы с вами свяжемся
+					</div>
+					<form action="#">
+						<div class="feedback-modal__form">
+							<div class="input-wrapper input-wrapper--grey">
+								<input type="text" placeholder="Введите имя">
+							</div>
+							<div class="form-row">
+								<div class="input-wrapper input-wrapper--grey">
+									<input type="tel" placeholder="Мобильный телефон">
+								</div>
+								<div class="input-wrapper input-wrapper--grey">
+									<input type="email" placeholder="Электронная почта">
+								</div>
+							</div>
+							<div class="input-wrapper input-wrapper--grey">
+								<input type="text" placeholder="Промокод">
+							</div>
+						</div>
+						<div class="agreement">
+							<label class="custom-checkbox">
+								<input type="checkbox" checked>
+								<span class="checkmark"></span>
+								<span>
+									Я согласен с <a href="#">правилами обработки персональных данных</a>
+								</span>
+							</label>
+
+							<label class="custom-checkbox">
+								<input type="checkbox" checked>
+								<span class="checkmark"></span>
+								<span>
+									Я согласен получать полезные материалы, быть в курсе скидок и акций
+								</span>
+							</label>
+						</div>
+						<input type="submit" value="Отправить" class="btn btn--red btn--large">
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- /.feedback-modal -->
 
 		<!-- SVG спрайт с symbols -->
 		<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">

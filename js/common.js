@@ -25,4 +25,18 @@ $(document).ready(function() {
     $('.close-menu').on('click', function() {
       $('.mobile-menu').removeClass('active')
     })
+
+    $('.js--feedback').on('click', function(e) {
+      e.preventDefault();
+
+      $('#overlay').show()
+      $('.feedback-modal').addClass('active')
+    })
+
+    $('#overlay, .close').on('click', function(e) {
+      e.preventDefault();
+
+      $('#overlay').hide()
+      $('.feedback-modal').removeClass('active')
+    })
   });

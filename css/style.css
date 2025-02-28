@@ -377,7 +377,7 @@ b, strong, .font-700 {
 
 .mobile-btns,
 .show-on-phone {
-  display: none;
+  display: none !important;
 }
 
 .icon svg {
@@ -746,12 +746,26 @@ b, strong, .font-700 {
   border-radius: 7px;
   padding: 0 15px;
   font-size: 16px;
+  transition: all 0.3s;
 }
 .input-wrapper input::-moz-placeholder {
   color: var(--text-gray);
 }
 .input-wrapper input::placeholder {
   color: var(--text-gray);
+}
+.input-wrapper input:focus {
+  box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.15);
+}
+.input-wrapper--grey input {
+  background: #F2F4F7;
+  border: none;
+}
+.input-wrapper--grey input::-moz-placeholder {
+  color: #747B8F;
+}
+.input-wrapper--grey input::placeholder {
+  color: #747B8F;
 }
 
 .sale-wrapper {
@@ -1154,6 +1168,255 @@ b, strong, .font-700 {
      object-fit: cover;
 }
 
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  display: none;
+  z-index: 90;
+}
+
+.feedback-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background: #fff;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 4px 33px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  overflow: hidden;
+  display: none;
+  z-index: 100;
+}
+.feedback-modal.active {
+  display: block;
+}
+.feedback-modal__content {
+  display: flex;
+  position: relative;
+}
+.feedback-modal__content .close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.feedback-modal__content .close svg {
+  width: 100%;
+  height: 100%;
+}
+.feedback-modal__left {
+  background: #EAECEE;
+  width: 35%;
+  min-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.feedback-modal__left .modal-title,
+.feedback-modal__left .feedback-modal__description {
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.feedback-modal__right {
+  width: 65%;
+  min-width: 705px;
+  padding: 5rem 7rem;
+}
+.feedback-modal__right .modal-title {
+  margin-bottom: 2.5rem;
+}
+.feedback-modal__form .input-wrapper {
+  margin-bottom: 3rem;
+}
+
+.feedback-modal__description {
+  margin-top: 3rem;
+}
+.feedback-modal__description li {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  border-radius: 15px;
+  font-size: 1.8rem;
+  line-height: 1.25;
+}
+.feedback-modal__description li:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.feedback-modal__description li .icon {
+  flex: none;
+  width: 4.4rem;
+  height: 4.4rem;
+}
+.feedback-modal__description li .icon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.form-row {
+  display: flex;
+  gap: 3rem;
+}
+.form-row .input-wrapper {
+  flex-grow: 1;
+}
+
+.modal-title {
+  font-size: 3rem;
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+.agreement {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.custom-checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #747B8F;
+  line-height: 1.3;
+}
+.custom-checkbox a {
+  text-decoration: underline;
+}
+.custom-checkbox a:hover {
+  text-decoration: none;
+}
+
+/* Скрываем стандартный чекбокс */
+.custom-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Создаем кастомный чекбокс */
+.checkmark {
+  display: inline-block;
+  position: relative;
+  height: 18px;
+  width: 18px;
+  flex: none;
+  background-color: #D9D9D9;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Создаем галочку (скрыта, когда чекбокс не отмечен) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Показываем галочку, когда чекбокс отмечен */
+.custom-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Стиль галочки */
+.custom-checkbox .checkmark:after {
+  left: 6px;
+  top: 1px;
+  width: 6px;
+  height: 10px;
+  border: solid #e74c3c;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+@media (max-width: 1240px) {
+  .feedback-modal {
+    width: 90%;
+    max-width: 705px;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  .feedback-modal .btn {
+    font-size: 16px;
+  }
+  .feedback-modal__content {
+    flex-direction: column;
+  }
+  .feedback-modal__left,
+  .feedback-modal__right {
+    width: 100%;
+    max-width: unset;
+    min-width: unset;
+  }
+  .modal-title {
+    font-size: 24px;
+    text-align: center;
+  }
+  .feedback-modal__left {
+    padding: 50px 0;
+  }
+  .feedback-modal__left .feedback-modal__description {
+    max-width: unset;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .feedback-modal__left .feedback-modal__description li {
+    font-size: 14px;
+  }
+  .input-wrapper {
+    height: 50px;
+  }
+  .agreement {
+    gap: 20px;
+    margin: 30px 0;
+  }
+  .custom-checkbox {
+    font-size: 14px;
+  }
+  .feedback-modal__right {
+    padding: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .feedback-modal__left {
+    display: none;
+  }
+  .modal-title {
+    font-size: 20px;
+  }
+  .modal-title br {
+    display: none;
+  }
+  .feedback-modal__right {
+    padding: 30px 15px;
+  }
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  .custom-checkbox {
+    font-size: 12px;
+  }
+  .feedback-modal .btn {
+    width: 100%;
+  }
+}
 @media (max-width: 1540px) {
   html {
     font-size: 0.6vw;
@@ -1267,10 +1530,10 @@ b, strong, .font-700 {
   .garant-list,
   .item-body--block,
   .bonus__list {
-    display: block;
+    display: block !important;
   }
   .show-on-phone.badge {
-    display: flex;
+    display: flex !important;
   }
   .first-screen__left {
     width: 100%;

@@ -114,10 +114,10 @@
     .garant-list,
     .item-body--block,
     .bonus__list {
-        display: block;
+        display: block !important;
     }
     .show-on-phone.badge {
-        display: flex;
+        display: flex !important;
     }
     .first-screen__left {
         width: 100%;

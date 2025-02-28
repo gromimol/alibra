@@ -8,8 +8,23 @@
         border-radius: 7px;
         padding: 0 15px;
         font-size: 16px;
+        transition: all .3s;
         &::placeholder {
             color: var(--text-gray);
+        }
+
+        &:focus {
+            box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.15);
+        }
+    }
+
+    &--grey {
+        input {
+            background: #F2F4F7;
+            border: none;
+            &::placeholder {
+                color: #747B8F;
+            }
         }
     }
 }
