@@ -42,6 +42,10 @@ $(document).ready(function() {
   });
 
   document.getElementById('videoPlaceholder').addEventListener('click', function() {
+    // Показываем индикатор загрузки
+    document.getElementById('videoPlaceholder').style.display = 'none';
+    document.getElementById('loadingIndicator').style.display = 'flex';
+    
     // Создаем iframe с видео
     const iframe = document.createElement('iframe');
     iframe.src = "https://vk.com/video_ext.php?oid=-9094688&id=456239407&hd=2";
@@ -51,8 +55,12 @@ $(document).ready(function() {
     iframe.frameBorder = "0";
     iframe.allowFullscreen = true;
     
-    // Заменяем заглушку на видео
+    // При загрузке видео скрываем индикатор и показываем видео
+    iframe.onload = function() {
+        document.getElementById('loadingIndicator').style.display = 'none';
+        document.getElementById('videoContainer').style.display = 'block';
+    };
+    
+    // Добавляем iframe в контейнер
     document.getElementById('videoContainer').appendChild(iframe);
-    document.getElementById('videoPlaceholder').style.display = 'none';
-    document.getElementById('videoContainer').style.display = 'block';
 });
