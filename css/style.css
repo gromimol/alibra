@@ -1502,7 +1502,7 @@ b, strong, .font-700 {
     font-size: 1vw;
   }
   .mobile-btns {
-    display: flex;
+    display: flex !important;
     align-items: center;
     gap: 10px;
   }
