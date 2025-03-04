@@ -2,13 +2,24 @@
     html {
         font-size: 0.6vw;
     }
+    .garant-list__item {
+        font-size: 3rem;
+    }
+    .success__list__item .img {
+        width: 100px;
+        flex: none
+    }
+    .success__list__item{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gaP: 15px;
+        min-height: 25rem;
+    }
 }
 @media(max-width: 1460px) {
     html {
         font-size: .45vw;
-    }
-    h1, .h1 {
-        font-size: 5rem;
     }
     .first-screen__left .subtitle {
         font-size: 3rem;
@@ -34,6 +45,9 @@
     .bonus__list__item,
     .review-block {
         border-radius: 20px;
+    }
+    .garant-list__item {
+        font-size: 3rem;
     }
 }
 
@@ -121,7 +135,8 @@
     .sale-notice br,
     .sale-item__content__top .h3 br,
     .child .sale-item__content .h4 br,
-    .garant-list__item br{
+    .garant-list__item br,
+    .sale-item.intensive br{
         display: none;
     }
     .show-on-phone,
