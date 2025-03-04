@@ -1128,6 +1128,11 @@ b, strong, .font-700 {
      object-fit: cover;
 }
 
+#videoContainer {
+  overflow: hidden;
+  border-radius: 20px;
+}
+
 .play-button {
   position: absolute;
   top: 50%;
