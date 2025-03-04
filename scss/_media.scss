@@ -3,6 +3,22 @@
         font-size: 0.6vw;
     }
 }
+@media(max-width: 1460px) {
+    html {
+        font-size: .45vw;
+    }
+    h1, .h1 {
+        font-size: 5rem;
+    }
+    .first-screen__left .subtitle {
+        font-size: 3rem;
+    }
+    .first-screen__left .top-title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        line-height: 1.5;
+    }
+}
 @media(max-width: 1024px) {
     .input-wrapper {
         input {

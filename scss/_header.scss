@@ -14,6 +14,9 @@
 	-o-transition: top 0.4s;
 	transition: top 0.4s;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    &.active {
+        top: 0 !important;
+    }
 }
 .logo {
     display: inline-flex;

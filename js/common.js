@@ -19,11 +19,11 @@ $(document).ready(function() {
     });
 
     $('.burger').on('click', function() {
-      $('.mobile-menu').addClass('active')
+      $('.mobile-menu, .header').addClass('active')
     })
 
     $('.close-menu').on('click', function() {
-      $('.mobile-menu').removeClass('active')
+      $('.mobile-menu, .header').removeClass('active')
     })
 
     $('.js--feedback').on('click', function(e) {
