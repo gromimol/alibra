@@ -802,11 +802,11 @@ b, strong, .font-700 {
   z-index: 2;
 }
 .callback-form {
-  gap: 13rem;
+  gap: 3rem;
 }
 .callback-form .input-wrapper {
   width: 100%;
-  max-width: 430px;
+  max-width: 40rem;
 }
 .callback-form .btn {
   padding: 0 5rem;
@@ -855,6 +855,7 @@ b, strong, .font-700 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 4rem;
+  margin-bottom: 4rem;
 }
 
 .sale-hit .block-title {
@@ -1628,6 +1629,21 @@ b, strong, .font-700 {
     line-height: 1.5;
   }
 }
+@media (max-width: 1200px) {
+  .callback-form {
+    flex-wrap: wrap;
+  }
+  .callback-form .btn {
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+  }
+  .callback-form .input-wrapper {
+    max-width: unset;
+    width: auto;
+    flex-grow: 1;
+  }
+}
 @media (max-width: 1024px) {
   .input-wrapper input {
     font-size: 14px;
@@ -1643,6 +1659,9 @@ b, strong, .font-700 {
     border-radius: 20px;
   }
   .garant-list__item {
+    font-size: 3rem;
+  }
+  .form-notice {
     font-size: 3rem;
   }
 }
@@ -1809,9 +1828,14 @@ b, strong, .font-700 {
   }
   .callback-form {
     flex-direction: column;
+    max-width: 300px;
+    margin: 0 auto;
   }
   .callback-form .btn {
     font-size: 15px;
+  }
+  .callback-form .input-wrapper {
+    width: 100%;
   }
   .input-wrapper {
     height: 40px;
@@ -1891,7 +1915,8 @@ b, strong, .font-700 {
   }
   .garant-list__item {
     margin-bottom: 10px;
-    font-size: 18px;
+    font-size: 16px;
+    text-align: center;
     line-height: 1.2;
     flex-direction: row;
     align-items: center;
@@ -1900,6 +1925,9 @@ b, strong, .font-700 {
     width: 200px;
     display: block;
     margin: 0 auto;
+  }
+  .garant .btn-block .btn {
+    font-size: 16px;
   }
   .garant-list__item:not(:first-child) {
     min-height: 83px;
@@ -1960,13 +1988,18 @@ b, strong, .font-700 {
   }
   .footer-menu__column {
     width: 45%;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
   .footer-menu__column--app {
     width: 100%;
   }
-  .footer-menu__item:not(:last-child) {
-    margin-bottom: 8px;
+  .footer-menu__item {
+    margin-bottom: 0 !important;
+  }
+  .footer-menu__item a {
+    padding: 8px 0;
+    display: block;
+    line-height: 1.3;
   }
   .footer-app__title {
     color: #000;
