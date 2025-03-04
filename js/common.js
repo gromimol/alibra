@@ -41,6 +41,77 @@ $(document).ready(function() {
     })
   });
 
+  $(document).ready(function() {
+    // Получаем высоту хедера
+    var headerHeight = $('header').outerHeight();
+    
+    // Устанавливаем отступ для контента равный высоте хедера
+    $('.header-placeholder').css('height', headerHeight + 'px').show();
+    $('body').css('padding-top', headerHeight + 50 + 'px');
+    
+    // Определяем порог прокрутки (можно установить другое значение, например 300px)
+    var scrollThreshold = 300;
+    
+    // Переменные для отслеживания скролла
+    var tempScrollTop, currentScrollTop = $(window).scrollTop();
+    
+    // Добавляем CSS-правила динамически в зависимости от высоты хедера
+    $('<style>')
+        .prop('type', 'text/css')
+        .html('\
+            .fixed-header header { \
+                top: -' + headerHeight + 'px; \
+            } \
+            .fixed-header header.show { \
+                top: 0; \
+            }')
+        .appendTo('head');
+    
+    $(window).scroll(function() {
+        currentScrollTop = $(window).scrollTop();
+        
+        // Проверка условия: прокрутка больше порога
+        if (currentScrollTop > scrollThreshold) {
+            $('body').addClass('fixed-header');
+            
+            // Скролл вверх - показываем хедер
+            if (tempScrollTop > currentScrollTop) {
+                $('header').addClass('show');
+            } 
+            // Скролл вниз - скрываем хедер
+            else {
+                $('header').removeClass('show');
+            }
+        } 
+        // Прокрутка меньше порога - возвращаем всё в исходное состояние
+        else {
+            $('body').removeClass('fixed-header');
+            $('header').removeClass('show');
+        }
+        
+        tempScrollTop = currentScrollTop;
+    });
+    
+    // Обработка изменения размера окна
+    $(window).resize(function() {
+        // Повторно вычисляем высоту хедера при изменении размера окна
+        headerHeight = $('header').outerHeight();
+        
+        // Обновляем высоту заполнителя
+        $('.header-placeholder').css('height', headerHeight + 'px');
+        
+        // Обновляем CSS-правила
+        $('style').last().html('\
+            .fixed-header header { \
+                top: -' + headerHeight + 'px; \
+            } \
+            .fixed-header header.show { \
+                top: 0; \
+            }');
+    });
+});
+
+
   document.getElementById('videoPlaceholder').addEventListener('click', function() {
     // Показываем индикатор загрузки
     document.getElementById('videoPlaceholder').style.display = 'none';
