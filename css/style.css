@@ -1062,10 +1062,12 @@ b, strong, .font-700 {
   justify-content: center;
   transition: all 0.3s;
 }
-.success__list__item:hover {
-  box-shadow: 0 50px 20px -40px rgba(0, 0, 0, 0.2);
-  transform: translateY(-5px);
-  cursor: default;
+@media (min-width: 1300px) {
+  .success__list__item:hover {
+    box-shadow: 0 50px 20px -40px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    cursor: default;
+  }
 }
 .success__list__item:last-child {
   grid-column: 1/-1;
@@ -1981,7 +1983,7 @@ b, strong, .font-700 {
     border-radius: 10px;
   }
   .success__list__item .img img {
-    max-width: 140px;
+    max-width: 100px;
   }
   .success__list__item--mobile {
     width: 100%;
@@ -2049,5 +2051,10 @@ b, strong, .font-700 {
   #videoContainer {
     border-radius: 20px;
     overflow: hidden;
+  }
+  .success__list__item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1px;
   }
 }
