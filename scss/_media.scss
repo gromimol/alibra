@@ -1,4 +1,4 @@
-@media (max-width: 1800px) {
+@media (max-height: 950px) {
     html {
         font-size: 0.5vw;
     }
@@ -421,7 +421,7 @@
     }
     .video-block {
         iframe {
-            height: 300px;
+            height: 200px;
         }
     }
     .bonus__list {
