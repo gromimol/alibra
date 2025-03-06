@@ -165,7 +165,7 @@
     }
     .first-screen__left .show-on-phone {
         font-size: 18px;
-        margin: 10px 0 20px;
+        margin: 10px auto 20px;
         font-weight: 500;
         img {
             margin-left: auto;
@@ -200,6 +200,7 @@
     }
     .first-screen__left {
         width: 100%;
+        align-items: center;
     }
     .burger {
         display: flex;

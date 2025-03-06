@@ -42,7 +42,7 @@ $(document).ready(function() {
 
     $('.main-slider').slick({
       fade: true,
-      autoplay: true,
+      // autoplay: true,
       autoplaySpeed: 3000,
       prevArrow: '<span class="prev-arrow"><svg width="19" height="37" viewBox="0 0 19 37" fill="none" xmlns="http://www.w3.org/2000/svg"><line y1="-0.5" x2="24.7588" y2="-0.5" transform="matrix(-0.686624 0.727013 0.439726 0.898132 18 1)" stroke="#EB1E32"/><line y1="-0.5" x2="24.7588" y2="-0.5" transform="matrix(0.686624 0.727013 -0.439726 0.898132 1 19)" stroke="#EB1E32"/></svg></span>',
       nextArrow: '<span class="next-arrow"><svg width="19" height="37" viewBox="0 0 19 37" fill="none" xmlns="http://www.w3.org/2000/svg"><line y1="-0.5" x2="24.7588" y2="-0.5" transform="matrix(0.686624 0.727013 -0.439726 0.898132 1 1)" stroke="#EB1E32"/><line y1="-0.5" x2="24.7588" y2="-0.5" transform="matrix(-0.686624 0.727013 0.439726 0.898132 18 19)" stroke="#EB1E32"/></svg></span>',
