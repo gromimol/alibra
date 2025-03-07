@@ -910,6 +910,10 @@ b, strong, .font-700 {
   max-width: 430px;
   animation: heartbeat 1.5s ease-in-out infinite both;
 }
+
+.sale-item__img {
+  max-width: 300px;
+}
 @keyframes heartbeat {
   from {
     transform: scale(1);
