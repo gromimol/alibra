@@ -1668,7 +1668,10 @@ b, strong, .font-700 {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   }
   .sale-item {
-    padding: max(25px, 3rem) max(30px, 4rem);
+    padding: max(30px, 3rem) max(35px, 4rem);
+  }
+  .garant-list__item:not(:first-child) {
+    padding: max(25px, 3rem);
   }
 }
 @media (max-height: 950px) {
