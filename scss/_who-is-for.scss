@@ -1,0 +1,50 @@
+    .who-is-for {
+        margin-bottom: max(7.7rem, 50px);
+        .block-title {
+            margin-bottom: max(4.6rem, 20px);
+        }
+
+        &__list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 1fr;
+            gap: 3rem;
+
+            .item {
+                border-radius: 40px;
+                padding: 2rem 3rem;
+                .icon {
+                    height: 7rem;
+                    width: auto;
+                    margin-bottom: 1.6rem;
+                    img {
+                        max-width: unset;
+                        height: 100%;
+                    }
+                }
+                .text {
+                    font-size: max(2.6rem, 14px);
+                    line-height: 1.2;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+    .chat {
+        background: #FFEFEF;
+    }
+    .pazzle {
+        background: #FFF9E8;
+    }
+    .mountain {
+        background: #F2F0F0;
+    }
+    .movie {
+        background: #EBE7E7;
+    }
+    .hearts {
+        background: #E7F3FF;
+    }
+    .gamebox {
+        background: #E3FBED;
+    }

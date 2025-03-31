@@ -55,7 +55,7 @@ $(document).ready(function() {
     
     // Устанавливаем отступ для контента равный высоте хедера
     $('.header-placeholder').css('height', headerHeight + 'px').show();
-    $('body').css('padding-top', headerHeight + 50 + 'px');
+    $('body').css('padding-top', headerHeight + 20 + 'px');
     
     // Определяем порог прокрутки (можно установить другое значение, например 300px)
     var scrollThreshold = 300;
@@ -142,4 +142,64 @@ $(document).ready(function() {
     
     // Добавляем iframe в контейнер
     document.getElementById('videoContainer').appendChild(iframe);
+});
+
+$('.tab').on('click', function() {
+  // Удаляем активный класс у всех табов
+  $('.tab').removeClass('active');
+  // Добавляем активный класс к текущему табу
+  $(this).addClass('active');
+  
+  // Получаем ID таба из data-атрибута
+  const tabId = $(this).data('tab');
+  
+  // Скрываем все содержимое табов
+  $('.tab-content').removeClass('active').hide();
+  
+  // Показываем нужное содержимое
+  $('#' + tabId).addClass('active').show();
+});
+
+$(document).ready(function() {
+  // Функция переключения табов
+  $('.tab').on('click', function() {
+      // Удаляем активный класс у всех табов
+      $('.tab').removeClass('active');
+      // Добавляем активный класс к текущему табу
+      $(this).addClass('active');
+      
+      // Получаем ID таба из data-атрибута
+      const tabId = $(this).data('tab');
+      
+      // Скрываем все содержимое табов
+      $('.tab-content').removeClass('active').hide();
+      
+      // Показываем нужное содержимое
+      $('.tab-content[data-id="' + tabId + '"]').addClass('active').show();
+  });
+
+  // аккордеон
+  $('.js--accordeon__title').on('click', function() {
+    // Получаем родительский элемент аккордеона
+    const accordeonItem = $(this).parent('.js--accordeon-parent');
+    
+    // Проверяем, активен ли текущий элемент
+    const isCurrentActive = accordeonItem.hasClass('active');
+    
+    // Удаляем класс active у всех элементов
+    $('.js--accordeon-parent').removeClass('active');
+    
+    // Если текущий элемент не был активен, делаем его активным
+    // Если же он уже был активен, он останется закрытым
+    if (!isCurrentActive) {
+      // Добавляем класс active текущему элементу
+      accordeonItem.addClass('active');
+    }
+});
+
+// При загрузке страницы открываем первый элемент, если нет открытых
+if ($('.js--accordeon-parent.active').length === 0) {
+    $('.js--accordeon-parent').first().addClass('active');
+}
+
 });

@@ -29,6 +29,20 @@
         }
     }
 }
+@media (min-width: 768px) and (max-width: 1699px) {
+    .slick-slide img {
+        max-height: calc(310px + 5rem);
+        position: relative;
+        top: 5rem;
+    }
+}
+@media (min-width: 1700px) {
+    .slick-slide img {
+        max-height: calc(420px + 5rem);
+        position: relative;
+        top: 5rem;
+    }
+}
 .first-screen {
     border-radius: 4rem;
     background: #E7E7E7;
@@ -62,5 +76,6 @@
 
     &__right {
         width: 42%;
+        align-items: flex-end;
     }
 }

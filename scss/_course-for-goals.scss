@@ -1,0 +1,146 @@
+.course-for-goals{
+    margin-bottom: max(6rem, 30px);
+    .block-title {
+        margin-bottom: max(5rem, 20px);
+    }
+}
+        /* Обертка для табов и контента */
+        .course-tabs-wrapper {
+            display: flex;
+            margin-bottom: 40px;
+        }
+
+        /* Стили для левой колонки с табами */
+        .course-tabs {
+            width: 32rem;
+            min-width: 280px;
+            flex-shrink: 0;
+            margin-right: 30px;
+        }
+
+        .tab {
+            padding: .25em .5em;
+            font-size: max(4rem, 20px);
+            font-weight: 700;
+            white-space: nowrap;
+            margin-bottom: max(2.5rem, 20px);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .tab.active {
+            background-color: #EEEEEE;
+            border-radius: 10px;
+            color: var(--red);
+        }
+        .course-tabs {
+            font-size: max(4rem, 20px);
+            font-weight: 600;
+            line-height: 1.3;
+            span {
+                display: block;
+            }
+            .decor {
+                &::after {
+                    height: 0.7em;
+                }
+            }
+        }
+
+        /* Стили для правой колонки с контентом табов */
+        .tab-content-wrapper {
+            flex-grow: 1;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Стили для серой плашки с информацией о курсе */
+        .course-info-block {
+            background-color: #eee;
+            padding: max(2.3rem, 15px) max(3rem, 20px);
+            margin-bottom: max(2rem, 10px);
+            position: relative;
+            font-size: 2.8rem;
+            line-height: 1.2;
+            p {
+                &:not(:last-child) {
+                    margin-bottom: max(1.5rem, 10px);
+                }
+                &:last-child {
+                    margin-top: max(3rem, 20px);
+                }
+            }
+        }
+
+        .course-summary {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #8992AF;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 10px;
+            font-size: max(2rem, 12px);
+        }
+
+        /* Стили для блока с ключевым результатом */
+        .key-result {
+            margin-bottom: max(3rem, 10px);
+            position: relative;
+        }
+
+        .key-result p {
+            font-size: max(2.2rem, 14px);
+            line-height: 1.4;
+            padding-left: 1em;
+        }
+
+        /* Стили для блока с преимуществами курса */
+        .course-advantage {
+            border: 1px solid var(--red);
+            border-radius: 10px;
+            padding: max(1.5rem, 10px);
+            margin-bottom: 30px;
+        }
+
+        .course-advantage p {
+            font-size: max(2.2rem, 14px);
+            line-height: 1.4;
+        }
+
+        /* Стили для кнопки */
+        .course-action {
+            text-align: center;
+            .btn {
+                width: 100%;
+                max-width: 430px;
+            }
+        }
+
+        .signup-button {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .signup-button:hover {
+            background-color: #c0392b;
+        }
+
+        @media(min-width: 767px) {
+            .tab-content--mobile {
+                display: none !important;
+            }
+        }

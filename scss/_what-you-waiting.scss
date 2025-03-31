@@ -1,0 +1,75 @@
+.what-you-waiting {
+    margin-bottom: max(7.5rem, 40px);
+    &-wrapper {
+        margin-top: max(2.4rem, 15px);
+    }
+    &__form {
+        width: 100%;
+        max-width: 490px;
+    }
+}
+.what-you-waiting__accordeon {
+    flex-grow: 1;
+    margin-right: 30px;
+    background: #D4DBEF;
+    padding: 15px max(3rem, 15px);
+}
+
+.accordeon__title {
+    font-size: max(2.4rem, 18px);
+    font-weight: 600;
+    padding: 0.5em 0;
+    border-bottom: 1px solid rgba(255,255,255, .5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    transition: all .2s;
+    cursor: pointer;
+}
+.accordeon__content {
+    font-size: max(1.6rem, 12px);
+    line-height: 1.4;
+    margin-top: 15px;
+    ul {
+        list-style: disc;
+        padding-left: 1.5em;
+        li {
+            list-style: disc;
+            &:not(:last-child) {
+                margin-bottom: .5em;
+            }
+        }
+    }
+}
+.accordeon__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10L12 15L17 10' stroke='%23000000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+    width: 30px;
+    height: 30px;
+    flex: none;
+    border-radius: 50%;
+    transition: all .3s;
+}
+.js--accordeon__content {
+    display: none;
+}
+.js--accordeon-parent.active {
+    .js--accordeon__content {
+        display: block;
+    }
+    .accordeon__title {
+        border-color: transparent;
+    }
+    .accordeon__icon {
+        transform: rotate(180deg);
+        background-color: var(--red);
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10L12 15L17 10' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    }
+}

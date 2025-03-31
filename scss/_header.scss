@@ -1,6 +1,6 @@
 /*Header*/ 
 .header {
-    padding: 2.5rem 0 0;
+    padding: 0 0 10px;
     transition: transform 0.3s ease;
     transform: translateY(0);
     background: #fff;
@@ -17,10 +17,32 @@
     &.active {
         top: 0 !important;
     }
+
+    &__left {
+        gap: 2.5rem;
+    }
+
+    .container {
+        padding-top: 10px;
+    }
+}
+.top-banner {
+    display: block;
+    width: 100%;
+    &:hover {
+        img {
+            filter:brightness(.85);
+        }
+    }
+    img {
+        width: 100%;
+        max-width: unset;
+        transition: all .2s;
+    }
 }
 .logo {
     display: inline-flex;
-    max-width: 44rem;
+    max-width: 250px;
     width: 20vw;
     img {
         width: 100%;
@@ -28,15 +50,15 @@
 }
 .header__banner {
     display: inline-flex;
-    max-width: 20rem;
+    max-width: 120px;
     width: 10vw;
 }
 .menu {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1em;
     color: var(--text-black);
-    font-size: 2rem;
+    font-size: 1.8rem;
     a {
         &:hover {
             color: var(--text-gray);
@@ -130,12 +152,12 @@
 }
 .header__right__top {
     gap: 4rem;
-    padding-bottom: 2rem;
-    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    margin-bottom: .75rem;
     align-items: flex-start;
     .menu {
         border-bottom: 1px solid var(--border-color);
-        padding-bottom: 1rem;
+        padding-bottom: .75rem;
     }
 }
 .header__right__bottom {

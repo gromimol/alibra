@@ -22,7 +22,46 @@
     .garant-list__item:not(:first-child) {
         padding: max(25px,3rem);
     }
+    :root {
+        --width: 420px;
+    }
+    .main-banner__form {
+        position: static;
+        max-width: var(--width);
+    }
+    .feedback__content .input-wrapper {
+        height: 60px;
+    }
+    .main-banner__content {
+        width: calc(100% - var(--width));
+        position: relative;
+
+        &__img {
+            position: absolute;
+            right: -100px;
+            bottom: 0;
+            width: 300px;
+            left: auto;
+            img {
+                display: block;
+            }
+        }
+    }
+    .main-banner__content__body .title {
+        font-size: max(5rem, 25px);
+    }
+    .main-banner__content__body .description {
+        font-size: max(2.5rem, 14px);
+        width: 70%;
+    }
+    .main-banner__content__body .subtitle {
+        font-size: max(4rem, 16px);
+    }
+    .main-banner {
+        justify-content: space-between;
+    }
 }
+// 1700
 @media (max-height: 950px) {
     html {
         font-size: 0.5vw;
@@ -47,6 +86,9 @@
     }
     .success__list__item .text {
         font-size: 2.4rem;
+    }
+    .feedback__content .h4 {
+        font-size: max(2.8rem, 22px);
     }
 }
 @media (max-width: 1540px) {
@@ -143,7 +185,9 @@
     .garant-list__item,
     .success__list__item,
     .bonus__list__item,
-    .review-block {
+    .review-block,
+    .radius-lg,
+    .who-is-for__list .item {
         border-radius: 20px;
     }
     .garant-list__item {
@@ -151,6 +195,51 @@
     }
     .form-notice {
         font-size: 3rem;
+    }
+    .feature,
+    .radius-md,
+    .teachers__options__list .item{
+        border-radius: 10px;
+    }
+    .course-details,
+    .feedback__content .h4,
+    .main-banner-wrapper__title {
+        font-size: max(1.8rem, 14px);
+    }
+    .feedback__content .description {
+        font-size: max(1.6rem, 12px);
+    }
+    :root {
+        --width: 300px;
+    }
+    .main-banner__content__img {
+        width: 240px;
+        right: -70px;
+    }
+    .who-is-for__list .item .icon {
+        height: 30px;
+    }
+    .apps__icons {
+        img {
+            height: 30px;
+        }
+    }
+    h4, .h4 {
+        font-size: max(2.5rem, 16px);
+    }
+    h1, .h1 {
+        font-size: max(5rem, 30px);
+    }
+}
+// 1024
+@media(max-width: 990px) {
+    .course-tabs-wrapper {
+        flex-direction: column;
+    }
+    .course-tabs {
+        width: 100%;
+        display: flex;
+        gap: 15px
     }
 }
 
@@ -229,6 +318,8 @@
         img {
             margin-left: auto;
             margin-right: auto;
+            max-width: 300px;
+            max-height: 250px;
         }
     }
     .header__right,
@@ -243,7 +334,9 @@
     .sale-item__content__top .h3 br,
     .child .sale-item__content .h4 br,
     .garant-list__item br,
-    .sale-item.intensive br{
+    .sale-item.intensive br,
+    .main-banner__form,
+    .what-you-waiting__form{
         display: none;
     }
     .show-on-phone,
@@ -533,6 +626,145 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 1px
+    }
+    .main-banner__content,
+    .main-banner__content__body .description,
+    .feature--md,
+    .feature--lg {
+        width: 100%;
+    }
+    .main-banner__content__img {
+        position: absolute;
+        width: 160px;
+        right: -40px;
+        flex: none;
+        bottom: -20px;
+    }
+    .main-banner {
+        padding: 20px;
+        border-radius: 16px;
+    }
+    .main-banner__content {
+        align-items: flex-end;
+    }
+    .main-banner__content__body .description {
+        width: 70%;
+        line-height: 1.5;
+    }
+    .main-banner-wrapper__title {
+        padding-left: 0;
+        font-size: 12px;
+        text-align: center;
+    }
+    .main-banner-wrapper {
+        .btn.show-on-phone {
+            display: flex !important;
+            margin: 30px 0;
+        }
+    }
+    .main-banner__notice {
+        text-align: center;
+    }
+    .who-is-for__list {
+        grid-template-columns: 1fr;
+        gap: 20px
+    }
+    .who-is-for__list .item {
+        border-radius: 10px;
+        padding: 10px;
+        display: flex;
+        gap: 10px;
+    }
+    .who-is-for__list .item .icon {
+        width: 50px;
+        height: auto;
+        img {
+            height: auto;
+            width: 100%;
+        }
+    }
+    .who-is-for__list .item .text {
+        line-height: 1.4;
+        font-weight: 500;
+    }
+    .course-for-goals {
+        .block-title {
+            span {
+                display: block;
+            }
+        }
+    }
+    .what-you-waiting-wrapper {
+        display: block;
+    }
+    .features__item {
+        flex-direction: column;
+    }
+    .what-you-waiting__accordeon {
+        margin-right: 0;
+    }
+    .accordeon__title {
+        font-size: 16px;
+    }
+    .course-tabs-wrapper {
+        margin-bottom: 10px;
+    }
+    .tab {
+        margin: 15px 0;
+        padding: 15px 20px;
+        border-radius: 6px;
+        &--rocket-0 {
+            background: #E7F3FF;
+        }
+        &--rocket-1 {
+            background: #EEEEEE;
+        }
+        &--rocket-2 {
+            background: #FFEFEF;
+        }
+
+        &.active {
+            margin-bottom: 0;
+            border-radius: 6px 6px 0 0;
+        }
+    }
+    .tab-content {
+        &.active {
+            .course-info-block.radius-md{
+                border-radius: 0 0 6px 6px;
+            }
+        }
+    }
+    .course-summary {
+        position: static;
+        margin-bottom: 15px;
+    }
+    .course-info-block {
+        padding: 10px 20px;
+    }
+    .course-action {
+        margin-bottom: 30px;
+    }
+    .accordeon__icon {
+        width: 20px;
+        height: 20px;
+        margin-left: 20px;
+    }
+    .teachers__options__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .teachers__options__list .item {
+        font-size: 13px;
+    }
+    .teachers__options__wrapper {
+        padding: 20px;
+    }
+    .video {
+        .block-title {
+            span {
+                display: block;
+            }
+        }
     }
 }
 // 767
