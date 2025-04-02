@@ -169,3 +169,30 @@
 .practice {
     background: #E2E8F0;
 }
+/* Для мобильных устройств (≤ 768px) */
+@media (max-width: 768px) {
+    .online-meet__img .mobile-video {
+      display: block;
+      width: 100%;
+    }
+    
+    .online-meet__img .desktop-video,
+    .online-meet__img .fallback-img {
+      display: none;
+    }
+    .online-meet__img {
+        width: 100%;
+    }
+  }
+  
+  /* Для десктопов (> 768px) */
+  @media (min-width: 769px) {
+    .online-meet__img .desktop-video {
+      display: block;
+    }
+    
+    .online-meet__img .mobile-video,
+    .online-meet__img .fallback-img {
+      display: none;
+    }
+  }

@@ -821,5 +821,10 @@
             align-items: center;
         }
     }
+    .online-meet__options .option {
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
 }
 // 767
