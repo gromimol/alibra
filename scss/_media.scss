@@ -336,7 +336,8 @@
     .garant-list__item br,
     .sale-item.intensive br,
     .main-banner__form,
-    .what-you-waiting__form{
+    .what-you-waiting__form,
+    .app__img{
         display: none;
     }
     .show-on-phone,
@@ -673,7 +674,11 @@
         border-radius: 10px;
         padding: 10px;
         display: flex;
+        align-items: center;
         gap: 10px;
+        .icon {
+            margin-bottom: 0;
+        }
     }
     .who-is-for__list .item .icon {
         width: 50px;
@@ -764,6 +769,56 @@
             span {
                 display: block;
             }
+        }
+    }
+    .course-for-goals {
+        .tab-content--mobile {
+            padding-left: 20px;
+            padding-right: 20px;
+            .course-tabs {
+                gap: 7px
+            }
+        }
+    }
+    .accordeon__content {
+        margin-bottom: 15px;
+    }
+    .online-meet {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .online-meet__options {
+        margin-left: 0;
+        margin-top: 15px;
+    }
+    .sale-wrapper {
+        .slick-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, .5);
+            width: 30px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            z-index: 1;
+            svg {
+                width: 50%;
+                height: auto;
+            }
+        }
+        .prev-arrow {
+            left: 0px;
+        }
+        .next-arrow {
+            right: 0px;
+        }
+
+        .slick-track {
+            display: flex;
+            align-items: center;
         }
     }
 }

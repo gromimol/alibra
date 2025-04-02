@@ -14,7 +14,13 @@
     background: #D4DBEF;
     padding: 15px max(3rem, 15px);
 }
-
+.course-accordeon {
+    &:last-child {
+        .accordeon__title {
+            border-bottom: none;
+        }
+    }
+}
 .accordeon__title {
     font-size: max(2.4rem, 18px);
     font-weight: 600;
@@ -26,6 +32,7 @@
     user-select: none;
     transition: all .2s;
     cursor: pointer;
+
 }
 .accordeon__content {
     font-size: max(1.6rem, 12px);
