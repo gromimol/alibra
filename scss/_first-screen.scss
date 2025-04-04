@@ -77,5 +77,15 @@
     &__right {
         width: 42%;
         align-items: flex-end;
+
+        &--horizontal-center {
+            align-items: center;
+            img {
+                top: 0;
+            }
+        }
+        img {
+            object-fit: contain;
+        }
     }
 }

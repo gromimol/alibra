@@ -886,6 +886,16 @@ b, strong, .font-700 {
   width: 42%;
   align-items: flex-end;
 }
+.first-screen__right--horizontal-center {
+  align-items: center;
+}
+.first-screen__right--horizontal-center img {
+  top: 0;
+}
+.first-screen__right img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 
 .callback {
   box-shadow: 3px 7px 12px 0px rgba(0, 0, 0, 0.25);
