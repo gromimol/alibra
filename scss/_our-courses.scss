@@ -4,6 +4,9 @@
     .slick-track{
         display: flex;
         gap: 2rem;
+        .slick-slide {
+            height: auto;
+        }
     }
     .slick-arrow {
         position: absolute;
@@ -54,5 +57,8 @@
         font-size: max(1.8rem, 13px);
         min-width: unset;
         height: max(4rem, 30px);
+    }
+    .sale-item .badge + .cta-block {
+        margin-top: auto;
     }
 }

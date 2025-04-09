@@ -1981,6 +1981,9 @@ b, strong, .font-700 {
   display: flex;
   gap: 2rem;
 }
+.our-courses .slick-track .slick-slide {
+  height: auto;
+}
 .our-courses .slick-arrow {
   position: absolute;
   top: 50%;
@@ -2028,6 +2031,9 @@ b, strong, .font-700 {
   font-size: max(1.8rem, 13px);
   min-width: unset;
   height: max(4rem, 30px);
+}
+.our-courses .sale-item .badge + .cta-block {
+  margin-top: auto;
 }
 
 .faq .block-title {
