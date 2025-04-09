@@ -1,13 +1,58 @@
 
 .our-courses {
     margin-bottom: max(7rem, 40px);
+    .slick-track{
+        display: flex;
+        gap: 2rem;
+    }
+    .slick-arrow {
+        position: absolute;
+        top: 50%;
+        z-index: 1;
+        cursor: pointer;
+    }
+    .prev-arrow {
+        left: 0;
+        transform: translate(-100%, -50%);
+    }
+    .next-arrow {
+        right: 0;
+        transform: translate(100%, -50%);
+    }
     .sale-wrapper {
-        grid-auto-rows: auto;
+        display: block;
         .sale-item:first-child {
             grid-column: unset;
         }
     }
     .block-title {
         margin-bottom: max(4rem, 20px);
+    }
+    .sale-item__content__top {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 10px
+    }
+    .sale-notice {
+        br {
+            display: none;
+        }
+    }
+    .sale-item__content .h4,
+    .badge {
+        font-size: max(1.8rem, 14px);
+    }
+    .badge {
+        height: 2em;
+        .icon {
+            width: 1.5em;
+            height: 1.5em;
+        }
+    }
+    .btn {
+        font-size: max(1.8rem, 13px);
+        min-width: unset;
+        height: max(4rem, 30px);
     }
 }

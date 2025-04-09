@@ -1977,14 +1977,57 @@ b, strong, .font-700 {
 .our-courses {
   margin-bottom: max(7rem, 40px);
 }
+.our-courses .slick-track {
+  display: flex;
+  gap: 2rem;
+}
+.our-courses .slick-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  cursor: pointer;
+}
+.our-courses .prev-arrow {
+  left: 0;
+  transform: translate(-100%, -50%);
+}
+.our-courses .next-arrow {
+  right: 0;
+  transform: translate(100%, -50%);
+}
 .our-courses .sale-wrapper {
-  grid-auto-rows: auto;
+  display: block;
 }
 .our-courses .sale-wrapper .sale-item:first-child {
   grid-column: unset;
 }
 .our-courses .block-title {
   margin-bottom: max(4rem, 20px);
+}
+.our-courses .sale-item__content__top {
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.our-courses .sale-notice br {
+  display: none;
+}
+.our-courses .sale-item__content .h4,
+.our-courses .badge {
+  font-size: max(1.8rem, 14px);
+}
+.our-courses .badge {
+  height: 2em;
+}
+.our-courses .badge .icon {
+  width: 1.5em;
+  height: 1.5em;
+}
+.our-courses .btn {
+  font-size: max(1.8rem, 13px);
+  min-width: unset;
+  height: max(4rem, 30px);
 }
 
 .faq .block-title {
