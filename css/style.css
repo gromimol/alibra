@@ -3439,4 +3439,7 @@ b, strong, .font-700 {
   .spoken-features__row {
     grid-template-columns: 1fr;
   }
+  .main-banner--spoken .main-banner__content__img {
+    width: 200px;
+  }
 }
