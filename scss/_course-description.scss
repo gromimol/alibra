@@ -1,0 +1,15 @@
+.course-description {
+    margin: 40px 0;
+    border-radius: max(10px, 3rem);
+    background: #EDF3FB;
+    padding: max(20px, 4rem) max(15px, 2rem);
+
+    &__content {
+        margin-top: max(20px, 4rem);
+        font-size: max(14px, 1.8rem);
+        line-height: 1.4;
+        p:not(:last-child){
+            margin-bottom: 1em;
+        }
+    }
+}

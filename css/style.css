@@ -1707,6 +1707,52 @@ b, strong, .font-700 {
   padding: 3rem;
 }
 
+.quick-start-features__list {
+  display: grid;
+  grid-template-columns: 50rem 1fr;
+  grid-template-rows: auto auto;
+  grid-gap: max(20px, 3.5rem);
+}
+
+.quick-start-features__item {
+  padding: 2rem 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  font-size: max(2.4rem, 14px);
+  line-height: 1.3;
+}
+.quick-start-features__item--lg {
+  flex-direction: column;
+  padding: 6rem 4rem max(15px, 2rem) 4rem;
+}
+.quick-start-features__item--lg img {
+  margin-top: 2rem;
+}
+.quick-start-features__item p {
+  max-width: 610px;
+}
+.quick-start-features__item:first-child {
+  grid-column: 1;
+  grid-row: 1/span 2;
+}
+.quick-start-features__item:nth-child(2) {
+  grid-column: 2;
+  grid-row: 1;
+}
+.quick-start-features__item:nth-child(3) {
+  grid-column: 2;
+  grid-row: 2;
+}
+.quick-start-features__item .icon {
+  align-self: flex-end;
+  max-width: 5.8rem;
+}
+.quick-start-features__item .icon img {
+  width: 100%;
+}
+
 .course-for-goals {
   margin-bottom: max(6rem, 30px);
 }
@@ -2269,6 +2315,21 @@ b, strong, .font-700 {
 .social-contact {
   margin-top: max(5rem, 30px);
   gap: 20px;
+}
+
+.course-description {
+  margin: 40px 0;
+  border-radius: max(10px, 3rem);
+  background: #EDF3FB;
+  padding: max(20px, 4rem) max(15px, 2rem);
+}
+.course-description__content {
+  margin-top: max(20px, 4rem);
+  font-size: max(14px, 1.8rem);
+  line-height: 1.4;
+}
+.course-description__content p:not(:last-child) {
+  margin-bottom: 1em;
 }
 
 /*Footer*/
@@ -3441,5 +3502,35 @@ b, strong, .font-700 {
   }
   .main-banner--spoken .main-banner__content__img {
     width: 200px;
+  }
+  .quick-start-features__list {
+    display: flex;
+    flex-direction: column;
+  }
+  .quick-start-features__item {
+    padding: 20px;
+    font-weight: 500;
+  }
+  .quick-start-features__item--lg {
+    padding: 20px;
+    flex-direction: row-reverse;
+  }
+  .quick-start-features__item--lg img {
+    margin-top: 0;
+    width: 30%;
+  }
+  .quick-start-features__item--lg p {
+    flex-grow: 1;
+  }
+  .quick-start-features__item .icon {
+    max-width: unset;
+  }
+  .quick-start-features__item .icon img {
+    width: 35px;
+    height: 35px;
+    -o-object-fit: contain;
+       object-fit: contain;
+    max-width: unset;
+    display: block;
   }
 }
