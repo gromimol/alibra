@@ -72,4 +72,9 @@
             width: 100%;
         }
     }
+    &--quick-start {
+        .main-banner__content__body .description {
+            font-size: max(3.2rem, 14px);
+        }
+    }
 }

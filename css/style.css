@@ -1428,6 +1428,9 @@ b, strong, .font-700 {
 .main-banner--spoken .main-banner__content__body .description {
   width: 100%;
 }
+.main-banner--quick-start .main-banner__content__body .description {
+  font-size: max(3.2rem, 14px);
+}
 
 .feedback {
   background: #fff;
@@ -2124,8 +2127,11 @@ b, strong, .font-700 {
   gap: 5px;
   margin-bottom: 5px;
 }
-.app__content__imgs img {
+.app__content__imgs img, .app__content__imgs video {
   border-radius: 10px;
+}
+.app__content__imgs video {
+  width: 100%;
 }
 .app__icons {
   display: flex;
@@ -2138,7 +2144,7 @@ b, strong, .font-700 {
 .level__img {
   margin-top: max(2.5rem, 10px);
 }
-.level__img img {
+.level__img img, .level__img video {
   width: 100%;
   border-radius: 10px;
 }
@@ -2164,6 +2170,9 @@ b, strong, .font-700 {
   .online-meet__img .mobile-video {
     display: block;
     width: 100%;
+    width: calc(100% + 2px);
+    position: relative;
+    left: 1px;
   }
   .online-meet__img .desktop-video,
   .online-meet__img .fallback-img {
@@ -2177,6 +2186,9 @@ b, strong, .font-700 {
 @media (min-width: 769px) {
   .online-meet__img .desktop-video {
     display: block;
+    width: calc(100% + 2px);
+    position: relative;
+    left: -1px;
   }
   .online-meet__img .mobile-video,
   .online-meet__img .fallback-img {
@@ -2739,6 +2751,9 @@ b, strong, .font-700 {
   }
   .main-banner__content__img img {
     display: block;
+  }
+  .main-banner--quick-start .main-banner__content__img {
+    right: -30px;
   }
   .main-banner__content__body .title {
     font-size: max(5rem, 25px);
@@ -3532,5 +3547,8 @@ b, strong, .font-700 {
        object-fit: contain;
     max-width: unset;
     display: block;
+  }
+  .main-banner--quick-start .main-banner__content__body .description {
+    width: 80%;
   }
 }

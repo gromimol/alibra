@@ -47,6 +47,10 @@
             }
         }
     }
+    .main-banner--quick-start .main-banner__content__img {
+        right: -30px;
+
+    }
     .main-banner__content__body .title {
         font-size: max(5rem, 25px);
     }
@@ -892,6 +896,9 @@
                 display: block;
             }
         }
+    }
+    .main-banner--quick-start .main-banner__content__body .description {
+        width: 80%;
     }
 }
 // 767
