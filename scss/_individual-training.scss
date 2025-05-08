@@ -1,0 +1,46 @@
+.individual-training {
+    margin-bottom: max(7.7rem, 50px);
+    .block-title {
+        margin-bottom: max(5rem, 20px);
+    }
+    &-wrapper {
+        margin-bottom: max(6.5rem, 20px);
+    }
+
+    &__col {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        gap: max(3rem, 20px);
+
+        &--bg {
+            background: url('../img/course_page/individual.jpg') no-repeat center;
+            background-size: cover;
+        }
+    }
+
+    &__item{
+        padding: max(14px, 3rem);
+        font-size: max(14px, 2rem);
+        line-height: 1.4;
+        text-align: center;
+        .title {
+            font-size: max(14px, 2.4rem);
+            font-weight: 600;
+            margin-bottom: 1em;
+        }
+
+        &--empty {
+            padding: 0;
+            height: 0;
+        }
+        &--blur {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.4);
+        }
+    }
+}
+.individual-training-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: max(3rem, 20px);
+}

@@ -900,5 +900,44 @@
     .main-banner--quick-start .main-banner__content__body .description {
         width: 80%;
     }
+    .main-banner--goals .main-banner__content__img {
+        img {
+            position: absolute;
+            left: 120px;
+            top: 0;
+            height: 100%;
+            object-fit: cover;
+            filter: contrast(0.6);
+        }
+    }
+    .who-is-for--goals .spoken-features__row__left {
+        grid-template-columns: 1fr;
+    }
+    .who-is-for--goals .spoken-features__item h4 {
+        margin-bottom: 0.75em;
+    }
+    .who-is-for--goals .spoken-features__block__left .spoken-features__item--lg {
+        min-height: 300px;
+        margin-bottom: 20px;
+    }
+    .who-is-for--goals .spoken-features__block__left .spoken-features__item--bottom-wrapper {
+        position: absolute;
+        right: 0;
+        border: max(3rem, 20px) solid #fff;
+        border-width: max(3rem, 20px) 0 0 max(3rem, 20px);
+        margin-bottom: 0;
+    }
+    .spoken-features__item__list {
+        display: block;
+        br {
+            display: none;
+        }
+        ul {
+            width: 100%;
+        }
+    }
+    .individual-training-wrapper {
+        grid-template-columns: 1fr;
+    }
 }
 // 767
