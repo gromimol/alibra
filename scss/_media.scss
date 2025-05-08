@@ -936,8 +936,24 @@
             width: 100%;
         }
     }
-    .individual-training-wrapper {
+    .individual-training-wrapper,
+    .course-features-wrapper {
         grid-template-columns: 1fr;
+    }
+    .who-is-for--job .quick-start-features__row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .course-features__col {
+        grid-auto-rows: minmax(80px, auto);
+        .course-features__item:empty {
+            display: none;
+        }
+    }
+    .course-features__col--center::before {
+        background-position: 100% 0;
+        filter: opacity(1);
+        height: 100%;
+        border-radius: 20px;
     }
 }
 // 767
