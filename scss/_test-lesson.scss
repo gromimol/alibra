@@ -1,0 +1,117 @@
+.test-lesson {
+    margin-bottom: max(7.7rem, 50px);
+
+    .block-title {
+        margin-bottom: max(16px, 4.8rem);
+        .h3 {
+            margin-top: 0.4em;
+        }
+    }
+}
+
+.timeline-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Три колонки одинаковой ширины */
+    gap: 3rem;
+    position: relative;
+    font-size: max(14px, 2.4rem);
+    overflow: hidden;
+  }
+  
+  .timeline-section {
+    display: grid;
+    grid-column: span 1;
+    padding-left: 7rem;
+  }
+  
+  .header-section {
+    grid-column: 1 / span 2;
+    background-color: #DBE1F3;
+    padding: 2rem 8rem;
+    margin-bottom: max(10px, 2rem);
+    position: relative;
+    z-index: 2;
+    .header-title {
+        line-height: 1.2;
+    }
+  }
+  
+  .image-section {
+    grid-column: 3; /* Изображение в третьей колонке */
+    grid-row: 1 / span 4; /* Растягиваем изображение на всю высоту */
+    display: flex;
+    align-items: center;
+  }
+  
+  .image-section img {
+    max-width: 40rem;
+    height: auto;
+  }
+  
+  .timeline-item {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 40px;
+  }
+  
+  .timeline-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: 20px;
+    height: 20px;
+    background-color: #e74c3c;
+  }
+  
+  .timeline-item::after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    bottom: calc(100% - 10px);
+    width: 2px;
+    height: 200px;
+    background-color: #e74c3c;
+  }
+  
+  .timeline-item-title {
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  
+  .timeline-item-description {
+    color: #555;
+  }
+  
+  .timeline-bottom-item {
+    grid-column: 1 / span 2; /* Последний элемент занимает две колонки */
+    padding-left: 30px;
+    position: relative;
+    margin-left: 7rem;
+    font-size: max(16px, 2.8rem);
+
+    ::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 4px;
+        width: 20px;
+        height: 20px;
+        background-color: #e74c3c;
+      }
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 10px;
+        bottom: calc(100% - 10px);
+        width: 2px;
+        height: 200px;
+        background-color: #e74c3c;
+    }
+
+    & > * {
+        display: inline-block;
+    }
+  }
+  

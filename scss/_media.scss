@@ -49,7 +49,11 @@
     }
     .main-banner--quick-start .main-banner__content__img {
         right: -30px;
-
+    }
+    .main-banner--business .main-banner__content__img {
+        left: auto;
+        width: 480px;
+        right: -10px;
     }
     .main-banner__content__body .title {
         font-size: max(5rem, 25px);
@@ -955,5 +959,18 @@
         height: 100%;
         border-radius: 20px;
     }
+
+    .main-banner--business .main-banner__content__img {
+        width: 250px;
+    }
+    .options--4-cols {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 // 767
+
+@media(max-width: 480px) {
+    .options--4-cols {
+        grid-template-columns: 1fr;
+    }
+}

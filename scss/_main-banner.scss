@@ -111,4 +111,11 @@
             max-width: 510px;
         }
     }
+
+    &--business {
+        background: #DEDEDE;
+        .main-banner__content__img {
+            left: -34rem;
+        }
+    }
 }
