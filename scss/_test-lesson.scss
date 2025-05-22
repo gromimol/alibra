@@ -16,6 +16,7 @@
     position: relative;
     font-size: max(14px, 2.4rem);
     overflow: hidden;
+    margin-bottom: max(15px, 3rem);
   }
   
   .timeline-section {
@@ -40,11 +41,11 @@
     grid-column: 3; /* Изображение в третьей колонке */
     grid-row: 1 / span 4; /* Растягиваем изображение на всю высоту */
     display: flex;
-    align-items: center;
+    align-items: start;
   }
   
   .image-section img {
-    max-width: 40rem;
+    max-width: 45rem;
     height: auto;
   }
   
@@ -54,14 +55,15 @@
     margin-bottom: 40px;
   }
   
-  .timeline-item::before {
+  .timeline-item::before,
+  .timeline-bottom-item::before {
     content: "";
     position: absolute;
     left: 0;
     top: 1px;
     width: 20px;
     height: 20px;
-    background-color: #e74c3c;
+    background-color: var(--red);
   }
   
   .timeline-item::after {
@@ -71,7 +73,7 @@
     bottom: calc(100% - 10px);
     width: 2px;
     height: 200px;
-    background-color: #e74c3c;
+    background-color: var(--red);
   }
   
   .timeline-item-title {
@@ -91,13 +93,7 @@
     font-size: max(16px, 2.8rem);
 
     ::before {
-        content: "";
-        position: absolute;
-        left: 0;
         top: 4px;
-        width: 20px;
-        height: 20px;
-        background-color: #e74c3c;
       }
 
     &::after {
@@ -107,7 +103,7 @@
         bottom: calc(100% - 10px);
         width: 2px;
         height: 200px;
-        background-color: #e74c3c;
+        background-color: var(--red);
     }
 
     & > * {

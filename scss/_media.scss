@@ -966,6 +966,54 @@
     .options--4-cols {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .timeline-container {
+        grid-template-columns: 1fr; /* Одна колонка на мобильных */
+        gap: 2rem;
+    }
+    
+    .timeline-section {
+        grid-column: 1; /* Каждая секция занимает всю ширину */
+        padding-left: 10px;
+    }
+
+    .timeline-item {
+        margin-bottom: 20px;
+    }
+    
+    .header-section {
+        grid-column: 1; /* Заголовок тоже на всю ширину */
+        padding: 15px 20px;
+        order: -3; /* Ставим заголовок первым */
+        height: 185px;
+        position: relative;
+        margin-top: 20px;
+        img {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+        .header-title {
+            width: 55%;
+            line-height: 1.4;
+        }
+    }
+    
+    .image-section {
+        display: none;
+    }
+    .timeline-bottom-item {
+        margin-left: 10px;
+    }
+    .timeline-item::before, .timeline-bottom-item::before {
+        width: 15px;
+        height: 15px;
+    }
+    .timeline-item::after,
+    .timeline-bottom-item::after {
+        left: 7px;
+        height: 120px;
+    }
 }
 // 767
 

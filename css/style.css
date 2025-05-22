@@ -2764,6 +2764,7 @@ b, strong, .font-700 {
   position: relative;
   font-size: max(14px, 2.4rem);
   overflow: hidden;
+  margin-bottom: max(15px, 3rem);
 }
 
 .timeline-section {
@@ -2788,11 +2789,11 @@ b, strong, .font-700 {
   grid-column: 3; /* Изображение в третьей колонке */
   grid-row: 1/span 4; /* Растягиваем изображение на всю высоту */
   display: flex;
-  align-items: center;
+  align-items: start;
 }
 
 .image-section img {
-  max-width: 40rem;
+  max-width: 45rem;
   height: auto;
 }
 
@@ -2802,14 +2803,15 @@ b, strong, .font-700 {
   margin-bottom: 40px;
 }
 
-.timeline-item::before {
+.timeline-item::before,
+.timeline-bottom-item::before {
   content: "";
   position: absolute;
   left: 0;
   top: 1px;
   width: 20px;
   height: 20px;
-  background-color: #e74c3c;
+  background-color: var(--red);
 }
 
 .timeline-item::after {
@@ -2819,7 +2821,7 @@ b, strong, .font-700 {
   bottom: calc(100% - 10px);
   width: 2px;
   height: 200px;
-  background-color: #e74c3c;
+  background-color: var(--red);
 }
 
 .timeline-item-title {
@@ -2839,13 +2841,7 @@ b, strong, .font-700 {
   font-size: max(16px, 2.8rem);
 }
 .timeline-bottom-item ::before {
-  content: "";
-  position: absolute;
-  left: 0;
   top: 4px;
-  width: 20px;
-  height: 20px;
-  background-color: #e74c3c;
 }
 .timeline-bottom-item::after {
   content: "";
@@ -2854,7 +2850,7 @@ b, strong, .font-700 {
   bottom: calc(100% - 10px);
   width: 2px;
   height: 200px;
-  background-color: #e74c3c;
+  background-color: var(--red);
 }
 .timeline-bottom-item > * {
   display: inline-block;
@@ -3771,6 +3767,49 @@ b, strong, .font-700 {
   }
   .options--4-cols {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .timeline-container {
+    grid-template-columns: 1fr; /* Одна колонка на мобильных */
+    gap: 2rem;
+  }
+  .timeline-section {
+    grid-column: 1; /* Каждая секция занимает всю ширину */
+    padding-left: 10px;
+  }
+  .timeline-item {
+    margin-bottom: 20px;
+  }
+  .header-section {
+    grid-column: 1; /* Заголовок тоже на всю ширину */
+    padding: 15px 20px;
+    order: -3; /* Ставим заголовок первым */
+    height: 185px;
+    position: relative;
+    margin-top: 20px;
+  }
+  .header-section img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  .header-section .header-title {
+    width: 55%;
+    line-height: 1.4;
+  }
+  .image-section {
+    display: none;
+  }
+  .timeline-bottom-item {
+    margin-left: 10px;
+  }
+  .timeline-item::before, .timeline-bottom-item::before {
+    width: 15px;
+    height: 15px;
+  }
+  .timeline-item::after,
+  .timeline-bottom-item::after {
+    left: 7px;
+    height: 120px;
   }
 }
 @media (max-width: 480px) {
