@@ -28,6 +28,25 @@
                     font-weight: 500;
                 }
             }
+
+            &--icon-bottom {
+                .item {
+                    display: flex;
+                    flex-direction: column-reverse;
+                    .text {
+                        flex-grow: 1;
+                    }
+                    .icon {
+                        text-align: right;
+                        margin-bottom: 0;
+                        margin-top: 1.6rem;
+                    }
+                }
+            }
+        }
+
+        .course-action {
+            margin-top: max(4rem, 20px);
         }
     }
     .chat {
@@ -400,5 +419,13 @@
         }
         .course-tabs {
             width: auto;
+        }
+    }
+
+    .quick-start-features__item--image {
+        .image {
+            width: 35%;
+            margin-left: 2rem;
+            text-align: center;
         }
     }

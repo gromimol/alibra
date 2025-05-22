@@ -67,6 +67,9 @@
     &--goals {
         max-width: unset;
     }
+    &--full {
+        max-width: unset;
+    }
 }
 .main-banner {
     &--spoken {
@@ -116,6 +119,13 @@
         background: #DEDEDE;
         .main-banner__content__img {
             left: -34rem;
+        }
+    }
+
+    &--chinese {
+        background: #D7E8F2;
+        .main-banner__content__img  {
+            left: -25rem;
         }
     }
 }

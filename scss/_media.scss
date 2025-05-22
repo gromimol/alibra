@@ -68,6 +68,12 @@
     .main-banner {
         justify-content: space-between;
     }
+
+    .main-banner--chinese .main-banner__content__img {
+        width: 500px;
+        left: 25rem;
+        right: auto;
+    }
 }
 // 1700
 @media(max-width: 1400px) {
@@ -245,6 +251,9 @@
     }
     h1, .h1 {
         font-size: max(5rem, 30px);
+    }
+    .main-banner--chinese .main-banner__content__img {
+        width: 300px;
     }
 }
 // 1024
@@ -1074,6 +1083,21 @@
         width: 16px;
         height: 16px;
         top: 4px;
+    }
+    .main-banner--chinese .main-banner__content__img {
+        width: 240px;
+    }
+    .who-is-for--job .quick-start-features__row--1-col-on-mobile {
+        grid-template-columns: 1fr;
+    }
+    .who-is-for__list--icon-bottom .item {
+        position: relative;
+        .icon {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            padding: 10px;
+        }
     }
 }
 // 767
