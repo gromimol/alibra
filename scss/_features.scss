@@ -1,4 +1,5 @@
 .features {
+    margin-bottom: max(5rem, 25px);
     .btn {
         display: flex;
         width: 100%;
@@ -207,5 +208,66 @@
     .online-meet__img .mobile-video,
     .online-meet__img .fallback-img {
       display: none;
+    }
+  }
+
+  .features--test-lesson {
+    .online-meet {
+        background: #fff;
+    }
+
+    .feature.chat,
+    .feature.app {
+        padding-bottom: 0;
+        .chat__img {
+            margin-bottom: 0;
+            line-height: 0;
+        }
+    }
+    .apps__icons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+    .app__content .h4 {
+        margin-bottom: max(6rem, 10px);
+    }
+    .app__img {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding-top: 4rem;
+    }
+  }
+  .features-list {
+    background: #E5E3ED;
+    padding: 4rem 2.6rem;
+    height: calc(100% - 20px);
+    font-size: max(2.4rem, 14px);
+    font-weight: 500;
+    max-width: 514px;
+    line-height: 1.3;
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        li {
+            position: relative;
+            padding-left: 5rem;
+            list-style: none;
+          }
+          
+          li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 2px;
+            width: 3.4rem;
+            height: 3rem;
+            background-image: url('data:image/svg+xml;utf8,<svg width="34" height="30" viewBox="0 0 34 30" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="30" height="30" fill="white"/><g clip-path="url(%23clip0_936_898)"><path d="M2.18651 10.9831C4.9685 13.9323 7.45149 15.8373 10.4334 18.941C10.4931 18.9035 10.5668 18.8773 10.6011 18.8315C14.6078 13.5003 21.668 6.83097 33.6353 2.05913C33.7412 2.0171 33.8522 1.98671 34 2.00586C27.0804 7.74455 21.1149 14.0547 15.6869 21.1764C13.5554 23.9729 11.5713 27.6934 10.2021 26.8885C9.67657 26.5797 9.11162 26.2979 8.67414 25.8896C5.67193 23.086 2.83447 19.6902 0.935064 16.9548C0.318022 16.0662 -0.278692 14.8243 0.139728 13.8304C0.59838 12.7411 1.24846 11.7918 2.18651 10.9831Z" fill="%23EB1E32"/></g><defs><clipPath id="clip0_936_898"><rect width="34" height="25" fill="white" transform="translate(0 2)"/></clipPath></defs></svg>');
+            background-repeat: no-repeat;
+            background-size: contain;
+          }
     }
   }
