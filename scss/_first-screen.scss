@@ -1,5 +1,9 @@
 .main-slider {
     position: relative;
+
+    &--simple {
+        margin-bottom: max(30px, 6rem);
+    }
     .slick-track {
         display: flex;
     }
