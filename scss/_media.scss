@@ -74,6 +74,9 @@
         left: 25rem;
         right: auto;
     }
+    .contact-block {
+        grid-template-columns: 1fr;
+    }
 }
 // 1700
 @media(max-width: 1400px) {
@@ -254,6 +257,9 @@
     }
     .main-banner--chinese .main-banner__content__img {
         width: 300px;
+    }
+    .contact__form {
+        grid-template-columns: 1fr;
     }
 }
 // 1024
@@ -1102,6 +1108,12 @@
     .content-warn,
     .content-bg {
         padding: 15px 15px 5px;
+    }
+    .contact-page {
+        padding-top: 0;
+    }
+    .contact__form__descr .h4 {
+        margin: 20px 0 10px;
     }
 }
 // 767
