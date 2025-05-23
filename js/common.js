@@ -47,6 +47,70 @@ $(document).ready(function() {
       prevArrow: '<span class="prev-arrow"><svg width="19" height="37" viewBox="0 0 19 37" fill="none" xmlns="http://www.w3.org/2000/svg"><line y1="-0.5" x2="24.7588" y2="-0.5" transform="matrix(-0.686624 0.727013 0.439726 0.898132 18 1)" stroke="#EB1E32"/><line y1="-0.5" x2="24.7588" y2="-0.5" transform="matrix(0.686624 0.727013 -0.439726 0.898132 1 19)" stroke="#EB1E32"/></svg></span>',
       nextArrow: '<span class="next-arrow"><svg width="19" height="37" viewBox="0 0 19 37" fill="none" xmlns="http://www.w3.org/2000/svg"><line y1="-0.5" x2="24.7588" y2="-0.5" transform="matrix(0.686624 0.727013 -0.439726 0.898132 1 1)" stroke="#EB1E32"/><line y1="-0.5" x2="24.7588" y2="-0.5" transform="matrix(-0.686624 0.727013 0.439726 0.898132 18 19)" stroke="#EB1E32"/></svg></span>',
     });
+
+    // Инициализация слайдера годов
+  $('.years-slider').slick({
+      slidesToShow: 6,
+      arrows: true,
+      prevArrow: '<span class="prev-arrow"><svg width="19" height="37" viewBox="0 0 19 37" fill="none" xmlns="http://www.w3.org/2000/svg"><line y1="-0.5" x2="24.7588" y2="-0.5" transform="matrix(-0.686624 0.727013 0.439726 0.898132 18 1)" stroke="#908D8D"/><line y1="-0.5" x2="24.7588" y2="-0.5" transform="matrix(0.686624 0.727013 -0.439726 0.898132 1 19)" stroke="#908D8D"/></svg></span>',
+      nextArrow: '<span class="next-arrow"><svg width="19" height="37" viewBox="0 0 19 37" fill="none" xmlns="http://www.w3.org/2000/svg"><line y1="-0.5" x2="24.7588" y2="-0.5" transform="matrix(0.686624 0.727013 -0.439726 0.898132 1 1)" stroke="#908D8D"/><line y1="-0.5" x2="24.7588" y2="-0.5" transform="matrix(-0.686624 0.727013 0.439726 0.898132 18 19)" stroke="#908D8D"/></svg></span>',
+      dots: false,
+      infinite: false,
+      focusOnSelect: false,
+      responsive: [
+          {
+              breakpoint: 768,
+              settings: {
+                  slidesToShow: 4
+              }
+          },
+          {
+              breakpoint: 480,
+              settings: {
+                  slidesToShow: 3,
+                  swipeToSlide: true,
+              }
+          }
+      ]
+  });
+
+  // Инициализация слайдера контента
+  $('.content-slider').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      dots: false,
+      infinite: false,
+      fade: true,
+      speed: 300,
+      adaptiveHeight: true
+  });
+
+  // Обработчик клика по году
+  $('.year-item').on('click', function() {
+      var slideIndex = $(this).data('slide');
+      
+      // Убираем активный класс у всех годов
+      $('.year-item').removeClass('active');
+      // Добавляем активный класс текущему году
+      $(this).addClass('active');
+      
+      // Переключаем слайд контента
+      $('.content-slider').slick('slickGoTo', slideIndex);
+  });
+
+  // Синхронизация при использовании стрелок в слайдере годов
+  $('.years-slider').on('afterChange', function(event, slick, currentSlide) {
+      // Убираем активный класс у всех годов
+      $('.year-item').removeClass('active');
+      // Находим активный слайд и добавляем класс
+      $('.year-item').eq(currentSlide).addClass('active');
+      
+      // Переключаем контентный слайдер
+      $('.content-slider').slick('slickGoTo', currentSlide);
+  });
+
+
   });
 
   $(document).ready(function() {

@@ -1,0 +1,33 @@
+.history-page {
+    padding: 30px 0;
+    .block-title{
+        margin-bottom: max(25px, 8rem);
+    }
+}
+.year-item {
+    font-size: max(20px, 5rem);
+    color: #9E9E9E;
+    cursor: pointer;
+    transition: all 0.3s;
+    &.active {
+        color: var(--red);
+        font-weight: 600;
+    }
+}
+
+.years-slider {
+    display: flex;
+    align-items: center;
+    margin-bottom: max(20px, 3.8rem);
+    .slick-list {
+        padding: 0 30px;
+        flex-grow: 1;
+    }
+    .slick-arrow {
+        cursor: pointer;
+    }
+    .slick-disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
+}
