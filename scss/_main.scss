@@ -153,6 +153,11 @@ b, strong, .font-700{
 		font-size: 1.8rem;
 		height: 4rem;
 	}
+	&--xs {
+		font-size: 12px;
+		min-width: unset;
+		height: max(30px, 4rem);
+	}
 
 	&--red {
 		background: var(--red);
@@ -160,6 +165,11 @@ b, strong, .font-700{
 	}
 	&--outline {
 		border: 1px solid currentColor
+	}
+	&--outline-red {
+		color: var(--red);
+		border: 1px solid currentColor;
+		background: transparent;
 	}
 	&--white {
 		color: #EAECEE;

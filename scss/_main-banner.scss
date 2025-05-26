@@ -128,4 +128,17 @@
             left: -25rem;
         }
     }
+
+    &--hot-course {
+        background: #F8E9E9;
+        .main-banner__content__body {
+            .description {
+            max-width: 450px;
+            font-size: max(3rem, 14px);
+            & + .description {
+                margin-top: 1em;
+            }
+        }
+        }
+    }
 }

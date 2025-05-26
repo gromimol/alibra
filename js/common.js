@@ -110,6 +110,22 @@ $(document).ready(function() {
       $('.content-slider').slick('slickGoTo', currentSlide);
   });
 
+  // Табы в Горящих курсах
+  $('.tab-group__item').on('click', function() {
+    // Удаляем активный класс у всех табов
+    $('.tab-group__item').removeClass('active');
+    // Добавляем активный класс к текущему табу
+    $(this).addClass('active');
+    
+    // Получаем ID таба из data-атрибута
+    const tabId = $(this).data('id');
+    
+    // Скрываем все содержимое табов
+    $('.courses-table').removeClass('active');
+    
+    // Показываем нужное содержимое
+    $('#' + tabId).addClass('active');
+  })
 
   });
 

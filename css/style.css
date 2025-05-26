@@ -305,12 +305,22 @@ b, strong, .font-700 {
   font-size: 1.8rem;
   height: 4rem;
 }
+.btn--xs {
+  font-size: 12px;
+  min-width: unset;
+  height: max(30px, 4rem);
+}
 .btn--red {
   background: var(--red);
   color: #fff;
 }
 .btn--outline {
   border: 1px solid currentColor;
+}
+.btn--outline-red {
+  color: var(--red);
+  border: 1px solid currentColor;
+  background: transparent;
 }
 .btn--white {
   color: #EAECEE;
@@ -1048,7 +1058,7 @@ b, strong, .font-700 {
 .input-wrapper {
   height: 6rem;
 }
-.input-wrapper input, .input-wrapper textarea {
+.input-wrapper input, .input-wrapper textarea, .input-wrapper select {
   display: block;
   width: 100%;
   height: 100%;
@@ -1059,18 +1069,28 @@ b, strong, .font-700 {
   font-family: "Montserrat", serif;
   transition: all 0.3s;
 }
-.input-wrapper input::-moz-placeholder, .input-wrapper textarea::-moz-placeholder {
+.input-wrapper input::-moz-placeholder, .input-wrapper textarea::-moz-placeholder, .input-wrapper select::-moz-placeholder {
   color: var(--text-gray);
 }
-.input-wrapper input::placeholder, .input-wrapper textarea::placeholder {
+.input-wrapper input::placeholder, .input-wrapper textarea::placeholder, .input-wrapper select::placeholder {
   color: var(--text-gray);
 }
-.input-wrapper input:focus, .input-wrapper textarea:focus {
+.input-wrapper input:focus, .input-wrapper textarea:focus, .input-wrapper select:focus {
   box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.15);
 }
 .input-wrapper textarea {
   resize: none;
   padding-top: 5px;
+}
+.input-wrapper select {
+  appearance: none; /* Убирает стандартную стрелку */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg width="36" height="19" viewBox="0 0 36 19" fill="none" xmlns="http://www.w3.org/2000/svg"><line y1="-1" x2="24.7588" y2="-1" transform="matrix(0.727013 0.686624 -0.84524 0.534387 0 2)" stroke="%23EB1E32" stroke-width="2"/><line y1="-1" x2="24.7588" y2="-1" transform="matrix(-0.727013 0.686624 0.84524 0.534387 36 2)" stroke="%23EB1E32" stroke-width="2"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 18px 10px;
+  padding-right: 40px;
 }
 .input-wrapper--grey input {
   background: #F2F4F7;
@@ -1607,6 +1627,16 @@ b, strong, .font-700 {
 }
 .main-banner--chinese .main-banner__content__img {
   left: -25rem;
+}
+.main-banner--hot-course {
+  background: #F8E9E9;
+}
+.main-banner--hot-course .main-banner__content__body .description {
+  max-width: 450px;
+  font-size: max(3rem, 14px);
+}
+.main-banner--hot-course .main-banner__content__body .description + .description {
+  margin-top: 1em;
 }
 
 #overlay {
@@ -3289,7 +3319,7 @@ b, strong, .font-700 {
   align-items: center;
   justify-content: space-between;
   gap: 15px;
-  font-size: max(2.4rem, 14px);
+  font-size: max(2.2rem, 14px);
   line-height: 1.3;
   font-weight: 500;
   padding: 3rem 4rem;
@@ -3568,6 +3598,159 @@ b, strong, .font-700 {
   opacity: 0.5;
 }
 
+.hot-courses {
+  margin: max(5.7rem, 30px) 0;
+}
+.hot-courses__badge {
+  text-align: right;
+  font-size: max(2.4rem, 14px);
+  font-weight: 500;
+  gap: 0.5rem;
+  font-weight: 300;
+}
+.hot-courses__sort-row {
+  margin: max(20px, 4rem) 0;
+  display: flex;
+  gap: max(10px, 2.4rem);
+}
+.hot-courses__sort-row .input-wrapper {
+  width: clamp(150px, 20vw, 250px);
+}
+
+.tab-group {
+  display: flex;
+  border-radius: 7px;
+  font-size: 16px;
+}
+.tab-group__item {
+  width: clamp(150px, 20vw, 250px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+}
+.tab-group__item:first-child {
+  border-radius: 7px 0 0 7px;
+}
+.tab-group__item:last-child {
+  border-radius: 0 7px 7px 0;
+}
+.tab-group__item:not(:last-child) {
+  border-right: 1px solid var(--border-color);
+}
+.tab-group__item.active {
+  background: var(--red);
+  color: #fff;
+  border-color: var(--red);
+  cursor: default;
+}
+
+.courses-table {
+  display: none;
+}
+.courses-table.active {
+  display: block;
+}
+
+.course-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr 1fr 120px;
+  gap: 15px;
+  padding: 20px;
+  align-items: start;
+  font-size: max(1.8rem, 14px);
+  line-height: 1.4;
+}
+.course-row:nth-child(even) {
+  background: #FAFAFA;
+}
+
+.course-row:last-child {
+  border-bottom: none;
+}
+
+.course-action {
+  text-align: right;
+}
+
+.btn-register {
+  background: transparent;
+  border: 1px solid #e74c3c;
+  color: #e74c3c;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-register:hover {
+  background: #e74c3c;
+  color: white;
+}
+
+.fire-icon {
+  display: inline-flex;
+  align-items: center;
+  color: #e74c3c;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.fire-icon::before {
+  content: "🔥";
+  margin-right: 5px;
+}
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+  .course-row {
+    grid-template-columns: 80px 1fr;
+    gap: 15px;
+    padding: 15px;
+  }
+  .course-date {
+    grid-row: 1/6;
+  }
+  .course-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .course-title {
+    font-size: 13px;
+    order: 1;
+  }
+  .course-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    order: 2;
+  }
+  .course-time {
+    font-size: 12px;
+  }
+  .course-level {
+    font-size: 12px;
+  }
+  .course-format {
+    font-size: 12px;
+  }
+  .course-action {
+    order: 3;
+    text-align: left;
+    margin-top: 8px;
+  }
+  .btn-register {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  .fire-icon {
+    font-size: 11px;
+    margin-top: 3px;
+  }
+}
 @media (max-width: 1700px) {
   .container {
     max-width: 1200px;
@@ -4617,6 +4800,36 @@ b, strong, .font-700 {
   }
   .contact__form__descr .h4 {
     margin: 20px 0 10px;
+  }
+  .main-banner--hot-course .main-banner__content__img {
+    width: 250px;
+    right: -80px;
+  }
+  .main {
+    overflow-x: hidden;
+  }
+  .hot-courses__sort-row {
+    flex-wrap: wrap;
+  }
+  .hot-courses__sort-row .tab-group {
+    order: -1;
+    width: 100%;
+    max-width: 400px;
+    height: 40px;
+  }
+  .hot-courses__sort-row .tab-group__item {
+    width: 100%;
+  }
+  .hot-courses__badge {
+    text-align: left;
+  }
+  .hot-courses__badge svg {
+    width: 30px;
+    height: 25px;
+  }
+  .hot-courses__sort-row .input-wrapper {
+    width: calc(50% - 5px);
+    max-width: 190px;
   }
 }
 @media (max-width: 480px) {

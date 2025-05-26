@@ -1115,6 +1115,40 @@
     .contact__form__descr .h4 {
         margin: 20px 0 10px;
     }
+    .main-banner--hot-course {
+        .main-banner__content__img {
+            width: 250px;
+            right: -80px;
+        }
+    }
+    .main {
+        overflow-x: hidden;
+    }
+    .hot-courses__sort-row {
+        flex-wrap: wrap;
+
+        .tab-group {
+            order:-1;
+            width: 100%;
+            max-width: 400px;
+            height: 40px;
+
+            &__item {
+                width: 100%;
+            }
+        }
+    }
+    .hot-courses__badge {
+        text-align: left;
+        svg {
+            width: 30px;
+            height: 25px;
+        }
+    }
+    .hot-courses__sort-row .input-wrapper {
+        width: calc(50% - 5px);
+        max-width: 190px;
+    }
 }
 // 767
 
