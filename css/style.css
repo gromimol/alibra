@@ -416,7 +416,7 @@ b, strong, .font-700 {
   height: 0.75em;
   background-image: url("data:image/svg+xml,%3Csvg width='293' height='27' viewBox='0 0 293 27' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.0180139 26.4889C-0.204564 25.6198 15.6407 20.3924 41.9672 14.721C55.1221 11.8633 70.8861 9.07451 88.5208 6.63314C106.143 4.29699 125.605 2.36962 146.066 1.26972C166.514 0.275054 186.023 0.286587 203.729 0.828133C221.393 1.53624 237.283 2.71304 250.511 4.24196C277.015 7.28238 293.071 10.8546 292.892 11.7752C292.686 12.9063 276.333 11.2018 249.878 9.54764C236.634 8.67663 220.85 8.06159 203.336 7.74868C185.809 7.541 166.507 7.80202 146.261 8.77094C126.002 9.8451 106.766 11.5362 89.2589 13.4779C71.785 15.5075 56.0695 17.7262 42.8837 19.9433C16.5547 24.2111 0.277309 27.595 0.00144243 26.445L0.0180139 26.4889Z' fill='%23EB1E32'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 0 center;
   background-size: contain;
 }
 
@@ -1646,6 +1646,9 @@ b, strong, .font-700 {
 .main-banner--lang-de {
   background-color: #F5EECF;
 }
+.main-banner--lang-es {
+  background-color: #F5DBDC;
+}
 .main-banner--lang .main-banner__content__img {
   right: -10px;
 }
@@ -1693,13 +1696,13 @@ b, strong, .font-700 {
   background: #F5EECF;
 }
 .page-tab__item--it {
-  background: #D5D2E0;
+  background: #CFEADC;
 }
 .page-tab__item--es {
-  background: #E2E8F0;
+  background: #F5DBDC;
 }
 .page-tab__item--fr {
-  background: #D8D8D8;
+  background: #CBD1EA;
 }
 
 #overlay {
@@ -2629,6 +2632,10 @@ b, strong, .font-700 {
     display: none !important;
   }
 }
+.course-for-goals--lg-tabs .course-tabs {
+  width: 48%;
+}
+
 .what-you-waiting {
   margin-bottom: max(7.5rem, 40px);
 }
@@ -2858,9 +2865,16 @@ b, strong, .font-700 {
   flex-direction: column;
   gap: 5px;
   margin-bottom: 5px;
+  max-height: 270px;
 }
 .app__content__imgs img, .app__content__imgs video {
   border-radius: 10px;
+  height: 100%;
+  max-height: 270px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: left;
+     object-position: left;
 }
 .app__content__imgs video {
   width: 100%;
@@ -3992,6 +4006,12 @@ b, strong, .font-700 {
   .contact-block {
     grid-template-columns: 1fr;
   }
+  .course-for-goals--lg-tabs .tab {
+    font-size: max(3rem, 15px);
+  }
+  .course-info-block {
+    font-size: 2.4rem;
+  }
 }
 @media (max-width: 1400px) {
   .test-lesson-how-work .fake-wrapper .fake-overlay::after {
@@ -5031,6 +5051,20 @@ b, strong, .font-700 {
     background: #E5DFDF;
     display: block;
   }
+  .page-tab--es .page-tab__item--it {
+    z-index: 2;
+  }
+  .page-tab--es .page-tab__item--es {
+    z-index: 2;
+  }
+  .page-tab--es .page-tab__item--de::before {
+    background: #F5EECF;
+    display: block;
+  }
+  .page-tab--es .page-tab__item--fr::before {
+    background: #CBD1EA;
+    display: block;
+  }
   .main-banner--lang {
     border-top-left-radius: 0;
   }
@@ -5066,6 +5100,10 @@ b, strong, .font-700 {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+  .tab {
+    white-space: normal;
+    line-height: 1.3;
   }
 }
 @media (max-width: 480px) {
