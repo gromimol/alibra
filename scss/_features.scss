@@ -212,9 +212,6 @@
   }
 
   .features--test-lesson {
-    .online-meet {
-        background: #fff;
-    }
 
     .feature.chat,
     .feature.app {
@@ -238,6 +235,18 @@
         flex-direction: column;
         gap: 20px;
         padding-top: 4rem;
+    }
+  }
+  .app__img--short-phone {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 4rem;
+    .apps__icons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
     }
   }
   .features-list {
