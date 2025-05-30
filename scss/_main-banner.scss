@@ -145,14 +145,24 @@
     &--lang {
         position: relative;
         z-index: 10;
+        .main-banner__content__img {
+            right: -10px;
+        }
         &-de {
             background-color: #F5EECF;
         }
         &-es {
             background-color: #F5DBDC;
         }
-        .main-banner__content__img {
-            right: -10px;
+         &-fr {
+            background-color: #CBD1EA;
+        }
+        &-it {
+            background-color: #CFEADC;
+            .main-banner__content__img  {
+                left: auto;
+                right: 20rem;
+            }
         }
     }
 }
