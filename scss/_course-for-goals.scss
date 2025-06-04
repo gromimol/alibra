@@ -150,3 +150,36 @@
         width: 48%;
     }
 }
+
+.course-info-block {
+    .course-info-block__img {
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(30%, -30%);
+            max-width: 15rem;
+            object-fit: contain;
+        }
+}
+.course-for-goals--kids-7 {
+    .course-tabs {
+        position: relative;
+        &__img {
+            position: absolute;
+            top: calc(100% - 8rem);
+            left: 0;
+            max-width: 25rem;
+        }
+    }
+
+}
+.tab-content-wrapper {
+    position: relative;
+    &__img {
+        position: absolute;
+        top: calc(100% - 5rem);
+        right: 0;
+        max-width: 13rem;
+        object-fit: contain;
+    }
+}

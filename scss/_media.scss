@@ -88,6 +88,12 @@
     .main-banner--lang-it .main-banner__content__img {
         right: -2rem;
     }
+    .main-banner--kids {
+        height: 53rem;
+    }
+    .main-banner--kids .main-banner__content__img {
+        width: 70rem;
+    }
 }
 // 1700
 @media(max-width: 1400px) {
@@ -224,7 +230,7 @@
     .review-block,
     .radius-lg,
     .who-is-for__list .item {
-        border-radius: 20px;
+        border-radius: 15px;
     }
     .garant-list__item {
         font-size: 3rem;
@@ -282,6 +288,9 @@
         width: 100%;
         display: flex;
         gap: 15px
+    }
+    .hide-on-tablet{
+        display: none !important;
     }
 }
 
@@ -1327,8 +1336,91 @@
     .lang-features__img {
         display: flex;
         align-items: center;
+        justify-content: center;
+        text-align: center;
         img {
             min-width: 70px;
+        }
+    }
+    .main-banner--kids {
+        height: auto;
+        padding-bottom: 0;
+    }
+    .main-banner--kids .main-banner__content__body {
+        text-align: center;
+
+        .title {
+            font-size: 20px;
+        }
+        .description {
+            width: 85%;
+            br {
+                display: none;
+            }
+        }
+    }
+    .main-banner--kids .main-banner__content__body .description {
+        margin-inline: auto;
+    }
+    .main-banner--kids .main-banner__content__img {
+        position: relative;
+    }
+    .main-banner--kids .main-banner__content {
+        flex-direction: column;
+    }
+    .page-switcher {
+        overflow-x: auto;
+    }
+    .appointment-form {
+        .btn {
+            width: 100%;
+            max-width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .feedback-modal__left {
+            display: block;
+            padding: 15px 0 0 0;
+        }
+        .modal-title {
+            font-size: 16px;
+        }
+
+        .feedback-modal__left .feedback-modal__description {
+            max-width: 85%;
+        }
+    }
+    .spoken-features .h4,
+    .feature .h4 {
+        font-size: 14px;
+    }
+    .features-col-3,
+    .features-grid-2-col,
+    .features-col-2 {
+        grid-template-columns: 1fr;
+    }
+    .features__img {
+        &--right {
+            img {
+                max-width: 70%;
+            }
+        }
+    }
+    .mobile-app {
+        flex-direction: column;
+        gap: 15px;
+        padding-bottom: 16px;
+    }
+    .mobile-app__img {
+        max-width: 250px;
+        display: block;
+        margin: 0 auto 10px;
+    }
+    .mobile-app .apps__icons {
+        flex-direction: row;
+        img {
+            width: 120px;
+            height: auto;
         }
     }
 }

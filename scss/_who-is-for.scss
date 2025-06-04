@@ -77,6 +77,11 @@
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 gap: max(3rem, 20px);
+
+                & > *:only-child {
+                    grid-column: 1 / -1;
+                }
+
             }
         }
         &__block {
@@ -134,8 +139,6 @@
                         border-radius:  max(3rem, 20px);
                     }
                 }
-                .spoken-features__item--bottom{
-                }
             }
             &__right {
                 width: calc(35% - max(3rem, 20px));
@@ -147,6 +150,7 @@
         &__item {
             position: relative;
             font-size: max(2.4rem, 14px);
+            text-wrap: balance;
             line-height: 1.2;
 
             .icon {
@@ -330,6 +334,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: top;
             padding: 0;
         }
         .spoken-features__item {

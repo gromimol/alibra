@@ -64,7 +64,6 @@
     font-size: max(2.8rem, 14px);
     line-height: 1.3;
     max-width: 1220px;
-    text-wrap: balance;
     &--goals {
         max-width: unset;
     }
@@ -212,6 +211,40 @@
         }
         &--fr {
             background: #CBD1EA;
+        }
+    }
+}
+
+// Страницы Детей
+.main-banner--kids {
+    background-color: #FF93A2;
+    color: #fff;
+    height: 63rem;
+    padding-right: 0;
+
+    .main-banner__content {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .main-banner__content__img {
+        display: flex;
+        align-items: end;
+        left: auto;
+        right: 0;
+        position: absolute;
+        bottom: 0;
+    }
+
+    .main-banner__content__body {
+        max-width: 850px;
+        .description {
+            font-size: max(2.5rem, 14px);
+            line-height: 1.2;
+            text-wrap: balance;
+            max-width: 580px;
+            font-weight: 400;
         }
     }
 }
