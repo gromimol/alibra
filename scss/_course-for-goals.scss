@@ -12,7 +12,7 @@
 
 /* Стили для левой колонки с табами */
 .course-tabs {
-    width: 32rem;
+    width: 40rem;
     min-width: 280px;
     flex-shrink: 0;
     margin-right: 30px;
@@ -20,7 +20,7 @@
 
 .tab {
     padding: .25em .5em;
-    font-size: max(4rem, 20px);
+    font-size: max(3.5rem, 20px);
     font-weight: 700;
     white-space: nowrap;
     margin-bottom: max(2.5rem, 20px);

@@ -94,6 +94,13 @@
     .main-banner--kids .main-banner__content__img {
         width: 70rem;
     }
+    .spoken-features__item,
+    .spoken-features__item .h4 {
+        font-size: max(2.1rem, 14px);
+    }
+    .who-is-for--goals .spoken-features__item {
+        padding: max(14px, 2.5rem);
+    }
 }
 // 1700
 @media(max-width: 1400px) {
