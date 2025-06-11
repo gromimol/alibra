@@ -37,7 +37,7 @@ $(document).ready(function() {
     $('#overlay, .close').on('click', function(e) {
         e.preventDefault();
         $('#overlay').hide();
-        $('.feedback-modal').removeClass('active');
+        $('.feedback-modal, .thanks-modal').removeClass('active');
     });
 
     // Главный слайдер

@@ -1466,6 +1466,12 @@
     .footer__copyright{
         padding-bottom: 40px;
     }
+    .thanks-modal__caption {
+        flex-direction: column-reverse;
+    }
+    .thanks-modal__caption__right img{
+        width: 70px;
+    }
 }
 // 767
 

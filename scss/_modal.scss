@@ -10,7 +10,8 @@
     z-index: 90;
 }
 
-.feedback-modal {
+.feedback-modal,
+.thanks-modal {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -246,5 +247,48 @@
     }
     .feedback-modal .btn {
         width: 100%;
+    }
+  }
+  .thanks-modal {
+    width: 90vw;
+    max-width: 1000px;
+    max-height: 80dvh;
+    overflow-y: auto;
+    &__content {
+        background: #E5ECF3;
+        padding: max(20px, 5rem);
+
+        .h1 {
+            margin-bottom: .75em;
+        }
+    }
+
+    &__caption {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        &__right {
+            img {
+                max-width: 200px;
+            }
+        }
+    }
+    .decor {
+        position: relative;
+        &::after {
+            position: absolute;
+            bottom: -0.4em;
+        }
+    }
+
+    &__description {
+        font-size: max(14px, 1.8rem);
+        line-height: 1.4;
+
+        p:not(:last-child ) {
+            margin-bottom: 2rem;
+        }
     }
   }
