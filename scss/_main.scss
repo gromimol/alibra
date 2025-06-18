@@ -129,6 +129,7 @@ b, strong, .font-700{
 	align-items: center;
 	justify-content: center;
 	font-size: max(2.3rem, 14px);
+	font-family: "Montserrat", serif;
 	font-weight: 500;
 	min-width: 22.5rem;
 	height: max(6rem, 35px);
@@ -388,4 +389,11 @@ b, strong, .font-700{
 	p {
 		font-size: max(2.8rem, 14px) !important;
 	}
+}
+.page__content p{
+    font-size: max(1.8rem, 14px);
+    line-height: 1.4;
+}
+.page__content p:not(:last-child) {
+    margin-bottom: max(10px, 1.5rem);
 }

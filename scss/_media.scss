@@ -551,7 +551,7 @@
             position: absolute;
             bottom: 10px;
             right: 10px;
-            width: 105px;
+            width: 85px;
         }
     }
     .child .sale-item__content {
@@ -1472,11 +1472,18 @@
     .thanks-modal__caption__right img{
         width: 70px;
     }
+    .course-info-block p:last-child {
+        margin-top: 0;
+    }
 }
 // 767
 
 @media(max-width: 480px) {
     .options--4-cols {
         grid-template-columns: 1fr;
+    }
+    .main-banner--goals .main-banner__content__body .description {
+        max-width: 220px;
+        font-size: 13px;
     }
 }

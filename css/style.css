@@ -280,6 +280,7 @@ b, strong, .font-700 {
   align-items: center;
   justify-content: center;
   font-size: max(2.3rem, 14px);
+  font-family: "Montserrat", serif;
   font-weight: 500;
   min-width: 22.5rem;
   height: max(6rem, 35px);
@@ -542,6 +543,15 @@ b, strong, .font-700 {
 }
 .course-advantage-block p {
   font-size: max(2.8rem, 14px) !important;
+}
+
+.page__content p {
+  font-size: max(1.8rem, 14px);
+  line-height: 1.4;
+}
+
+.page__content p:not(:last-child) {
+  margin-bottom: max(10px, 1.5rem);
 }
 
 /* Slider */
@@ -2998,7 +3008,6 @@ b, strong, .font-700 {
   flex-direction: column;
   gap: 5px;
   margin-bottom: 5px;
-  max-height: 270px;
 }
 .app__content__imgs img, .app__content__imgs video {
   border-radius: 10px;
@@ -3011,6 +3020,9 @@ b, strong, .font-700 {
 }
 .app__content__imgs video {
   width: 100%;
+}
+.app__content__imgs .apps__icons {
+  margin-top: 10px;
 }
 .app__icons {
   display: flex;
@@ -3129,6 +3141,8 @@ b, strong, .font-700 {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  height: 100%;
+  justify-content: center;
 }
 .features-list ul li {
   position: relative;
@@ -3186,6 +3200,11 @@ b, strong, .font-700 {
   display: grid;
   grid-template-columns: calc(33.333% - max(1.6rem, 8px)) 1fr;
   gap: max(3.2rem, 16px);
+}
+
+.feature:has(.h4:only-child) {
+  display: flex;
+  align-items: center;
 }
 
 .features__img {
@@ -4856,7 +4875,7 @@ b, strong, .font-700 {
     position: absolute;
     bottom: 10px;
     right: 10px;
-    width: 105px;
+    width: 85px;
   }
   .child .sale-item__content .badge {
     background: transparent;
@@ -5670,9 +5689,16 @@ b, strong, .font-700 {
   .thanks-modal__caption__right img {
     width: 70px;
   }
+  .course-info-block p:last-child {
+    margin-top: 0;
+  }
 }
 @media (max-width: 480px) {
   .options--4-cols {
     grid-template-columns: 1fr;
+  }
+  .main-banner--goals .main-banner__content__body .description {
+    max-width: 220px;
+    font-size: 13px;
   }
 }
