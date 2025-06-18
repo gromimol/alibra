@@ -3386,6 +3386,19 @@ b, strong, .font-700 {
   margin-top: auto;
 }
 
+.sale-item__content > * {
+  position: relative;
+}
+
+.mobile-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
 .faq {
   margin-top: max(30px, 6rem);
   margin-bottom: max(30px, 6rem);
