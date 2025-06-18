@@ -66,6 +66,16 @@
 .sale-item__content > * {
     position: relative;
 }
+.sale-item__content ul {
+    padding-left: 1.2em;
+    font-size: max(14px, 1.7rem);
+    line-height: 1.43;
+    list-style: disc;
+    margin-bottom: 2rem;
+}
+  .sale-item__content ul li  {
+        list-style: inherit;
+    }
 .mobile-link {
     position: absolute;
     top: 0;
