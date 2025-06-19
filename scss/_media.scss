@@ -1495,6 +1495,13 @@
             margin-bottom: 1em;
         }
     }
+    .feedback-modal__left--text {
+        display: block;
+        background: #fff;
+    }
+    .feedback-modal__content {
+        flex-direction: column-reverse;
+    }
 }
 // 767
 
