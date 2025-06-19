@@ -108,6 +108,9 @@
         right: calc(50% + max(4.8rem, 20px));
         bottom: calc(100% + max(10px, 3.2rem));
     }
+    .features-goals-col {
+        width: 40%;
+    }
 }
 // 1440
 @media (max-height: 950px) {
@@ -1474,6 +1477,23 @@
     }
     .course-info-block p:last-child {
         margin-top: 0;
+    }
+    .feature.goals {
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+    .features-goals-col {
+        width: 100%;
+    }
+    .feature-goals-col-2 {
+        grid-template-columns: 1fr;
+    }
+    .feature.goals {
+        .h4 {
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 1em;
+        }
     }
 }
 // 767

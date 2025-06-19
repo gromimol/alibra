@@ -372,3 +372,41 @@
 .pl-0 {
     padding-left: 0 !important;
 }
+.app__img {
+    text-align: center;
+    .apps__icons {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+        a {
+            flex-grow: 1;
+        }
+    }
+}
+.feature {
+    &.goals {
+        display: flex;
+        background: #fff;
+        gap: 20px;
+        padding: 0;
+    }
+}
+.features-goals-col {
+    width: 25%;
+}
+.feature-goals-options {
+    display: flex;
+    flex-direction: column;
+    gap: max(20px, 4rem);
+    margin-top: max(20px, 4rem);
+}
+.feature-goal__item {
+    padding: max(15px, 3.5rem) max(15px, 2.5rem);
+    font-size: max(2rem, 14px);
+    line-height: 1.3;
+}
+.feature-goals-col-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: max(3.2rem, 16px);
+}
