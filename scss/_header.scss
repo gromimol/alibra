@@ -86,7 +86,7 @@
         &::after {
             transform: translateY(-50%) rotate(180deg);
         }
-        .submenu-wrapper {
+        & > .submenu-wrapper {
             opacity: 1;
             pointer-events: all;
         }
@@ -105,6 +105,21 @@
     opacity: 0;
     pointer-events: none;
     transition: all .3s;
+
+    .submenu-wrapper {
+        left: 100%;
+        top: 0;
+        transform: translateX(0);
+        padding-top: 0;
+        .submenu-list {
+            font-size: 1.5rem;
+            &::before {
+                top: 8px;
+                left: 0;
+                transform: translateX(-50%) rotate(-90deg);
+            }
+        }
+    }
 }
 .submenu-list {
     position: relative;
