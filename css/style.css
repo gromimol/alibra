@@ -1043,6 +1043,10 @@ b, strong, .font-700 {
 .first-screen__left .btn {
   margin-top: auto;
 }
+.first-screen__left .cta-block {
+  display: flex;
+  gap: 2rem;
+}
 .first-screen__right {
   width: 42%;
   align-items: flex-end;
