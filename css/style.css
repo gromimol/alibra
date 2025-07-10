@@ -5824,6 +5824,14 @@ b, strong, .font-700 {
   .submenu .submenu {
     font-size: 14px;
   }
+  .first-screen {
+    padding: 15px 0;
+  }
+  .first-screen__left > div.show-on-phone {
+    display: flex !important;
+    flex-grow: 1;
+    align-items: center;
+  }
 }
 @media (max-width: 480px) {
   .options--4-cols {
