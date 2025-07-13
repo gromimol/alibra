@@ -26,6 +26,15 @@
                 margin-bottom: .5em;
             }
         }
+        ol {
+            list-style: decimal;
+            padding-left: 2em;
+            margin-bottom: 1em;
+            li {
+                list-style: decimal;
+                margin-bottom: .5em;
+            }
+        }
 
         & + * {
             margin-top: max(20px, 1.5rem);

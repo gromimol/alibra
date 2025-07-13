@@ -1,0 +1,104 @@
+.control-system {
+    margin: max(40px, 7rem) 0;
+    .block-title {
+        margin-bottom: max(20px, 4rem);
+    }
+    .subtitle {
+        margin-bottom: 20px;
+        padding-left: 1em;
+    }
+}
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+}
+.process-steps__item {
+    padding-inline: max(12px, 2rem);
+}
+.process-steps-decor {
+    margin-bottom: 3rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    position: relative;
+    &::before{
+        content: '';
+        width: 100%;
+        height: 2px;
+        background: var(--red);
+        position: absolute;
+        left: 0;
+        top: calc(50% - 1px);
+    }
+
+    &__item {
+        position: relative;
+        &::before {
+            content: '';
+            background: var(--red);
+            width: 22px;
+            height: 22px;
+            display: block;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        &:first-child {
+            &::after {
+                content: '';
+                width: 50%;
+                background: #fff;
+                height: 4px;
+                position: absolute;
+                left: 0;
+                top: calc(50% - 2px);
+            }
+        }
+        &:last-child {
+            &::after {
+                content: '';
+                width: 50%;
+                background: #fff;
+                height: 4px;
+                position: absolute;
+                right: 0;
+                top: calc(50% - 2px);
+            }
+        }
+    }
+}
+.control-system__img {
+    overflow: hidden;
+    margin: max(20px, 5rem) 0;
+    position: relative;
+    line-height: 0;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, rgba(32, 74, 99, 0.76), rgba(32, 74, 99, 0.76));
+    }
+    img {
+        width: 100%;
+    }
+}
+.quality-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: max(20px, 3rem);
+
+    &__item {
+        min-height: 13rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        line-height: 1.2;
+    }
+}

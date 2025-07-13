@@ -1,0 +1,15 @@
+.we-work {
+    margin: max(40px, 8rem) 0;
+    .teachers__options__wrapper {
+        background: transparent;
+    }
+    .teachers__options__list .item {
+        flex-direction: column;
+        b {
+            font-weight: 600;
+        }
+        .text-lt {
+            font-size: max(12px, 2rem);
+        }
+    }
+}

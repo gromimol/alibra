@@ -1,0 +1,12 @@
+.our-clients {
+    margin: max(30px, 6rem) 0;
+
+    &__logos {
+        background: #F0F5ED;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        margin-top: max(20px, 4.5rem);
+        padding: 20px 10px;
+    }
+}

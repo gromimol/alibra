@@ -1,0 +1,19 @@
+.lang-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: max(15px, 3rem);
+    margin: max(20px, 5rem) 0;
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: max(14px, 2rem);
+    }
+}
+.lang__icon {
+    width: 5.6rem;
+    img {
+        width: 100%;
+    }
+}

@@ -516,3 +516,45 @@
         overflow: hidden;
         max-width: 30%;
     }
+
+    .who-is-for--corporate {
+        .quick-start-features__list {
+            grid-template-columns: 40% 1fr;
+        }
+
+        .quick-start-features__item--first {
+            align-items: flex-start;
+        }
+        ul {
+            font-size: max(12px, 1.8rem);
+            list-style: disc;
+            padding-left: 1em;
+            font-weight: 400;
+            li {
+                list-style: inherit;
+                &:not(:last-child) {
+                    margin-bottom: max(5px, .7rem);
+                }
+            }
+        }
+
+        .quick-start-features__item--lg img {
+            margin-inline: auto;
+        }
+
+        &__row {
+            display: flex;
+            gap: max(20px, 3.5rem)
+        }
+    }
+     .quick-start-features__item--column{
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+     }
+     .notice-lt {
+        color: #9E9E9E;
+        font-weight: 500;
+        font-size: max(14px, 2rem);
+        cursor: default;
+     }

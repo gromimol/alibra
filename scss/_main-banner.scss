@@ -164,6 +164,14 @@
             }
         }
     }
+
+    &--corporate {
+        background: #DEE1EF;
+
+        .main-banner__content__img {
+            left: -40rem;
+        }
+    }
 }
 
 .page-tab {
