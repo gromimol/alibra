@@ -225,6 +225,11 @@ $(document).ready(function() {
     if ($('.js--accordeon-parent.active').length === 0) {
         $('.js--accordeon-parent').first().addClass('active');
     }
+
+    // ссылка для блока.
+    $('.mobile-link').on('click',function(e) {
+        e.stopPropagation();
+    })
 });
 
 // Видео плеер (оставляем отдельно, так как использует vanilla JS)

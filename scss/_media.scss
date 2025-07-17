@@ -1,6 +1,6 @@
 @media(max-width: 1700px) {
     .container {
-        max-width: 1200px;
+        max-width: 1400px;
     }
     .callback {
         max-width: 1000px;
@@ -106,6 +106,12 @@
         right: 0;
         width: 380px;
     }
+    .contract-format-item__content .text {
+        font-size: max(14px, 2rem);
+    }
+    .format__list__item {
+        font-size: max(14px, 2.2rem);
+    }
 }
 // 1700
 @media(max-width: 1400px) {
@@ -193,7 +199,7 @@
 }
 @media(max-width: 1460px) {
     html {
-        font-size: .45vw;
+        font-size: .48vw;
     }
     .first-screen__left .subtitle {
         font-size: 3rem;
