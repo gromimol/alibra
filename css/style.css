@@ -4953,8 +4953,8 @@ b, strong, .font-700 {
   margin-bottom: max(20px, 4rem);
 }
 .control-system .subtitle {
-  margin-bottom: 20px;
-  padding-left: 1em;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .process-steps {
