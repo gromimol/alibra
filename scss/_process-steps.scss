@@ -13,6 +13,9 @@
     grid-template-columns: repeat(4, 1fr);
     text-align: center;
 }
+.process-steps-wrapper {
+    margin-bottom: max(20px, 4rem);
+}
 .process-steps__item {
     padding-inline: max(12px, 2rem);
 }

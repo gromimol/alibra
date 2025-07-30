@@ -4439,39 +4439,39 @@ b, strong, .font-700 {
 }
 .page-switcher a:nth-child(2) {
   z-index: 9;
-  background: #d9d7e3;
+  background: rgb(217.2276315789, 214.5296052632, 227.1203947368);
 }
 .page-switcher a:nth-child(3) {
   z-index: 8;
-  background: #dddbe6;
+  background: rgb(221.4552631579, 219.0592105263, 230.2407894737);
 }
 .page-switcher a:nth-child(4) {
   z-index: 7;
-  background: #e2e0e9;
+  background: rgb(225.6828947368, 223.5888157895, 233.3611842105);
 }
 .page-switcher a:nth-child(5) {
   z-index: 6;
-  background: #e6e4ec;
+  background: rgb(229.9105263158, 228.1184210526, 236.4815789474);
 }
 .page-switcher a:nth-child(6) {
   z-index: 5;
-  background: #eae9f0;
+  background: rgb(234.1381578947, 232.6480263158, 239.6019736842);
 }
 .page-switcher a:nth-child(7) {
   z-index: 4;
-  background: #eeedf3;
+  background: rgb(238.3657894737, 237.1776315789, 242.7223684211);
 }
 .page-switcher a:nth-child(8) {
   z-index: 3;
-  background: #f3f2f6;
+  background: rgb(242.5934210526, 241.7072368421, 245.8427631579);
 }
 .page-switcher a:nth-child(9) {
   z-index: 2;
-  background: #f7f6f9;
+  background: rgb(246.8210526316, 246.2368421053, 248.9631578947);
 }
 .page-switcher a:nth-child(10) {
   z-index: 1;
-  background: #fbfbfc;
+  background: rgb(251.0486842105, 250.7664473684, 252.0835526316);
 }
 
 .appointment-form {
@@ -4961,6 +4961,10 @@ b, strong, .font-700 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   text-align: center;
+}
+
+.process-steps-wrapper {
+  margin-bottom: max(20px, 4rem);
 }
 
 .process-steps__item {
