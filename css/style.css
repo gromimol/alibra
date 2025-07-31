@@ -1099,6 +1099,7 @@ b, strong, .font-700 {
 }
 .callback-form .btn {
   padding: 0 5rem;
+  flex: none;
 }
 
 .form-notice {
@@ -5530,7 +5531,7 @@ b, strong, .font-700 {
   }
   .callback-form {
     flex-direction: column;
-    max-width: 300px;
+    max-width: 350px;
     margin: 0 auto;
   }
   .callback-form .btn {
