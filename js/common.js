@@ -87,6 +87,17 @@ $(document).ready(function() {
         adaptiveHeight: true
     });
 
+    // слайдер отзывов от партнеров
+    $('.partner-about-slider').slick({
+        slidesToShow: 1,
+        dots: true, // включаем стандартные точки
+        appendDots: $('.slider-pagination'), // вставляем точки в нужный контейнер
+        customPaging: function(slider, index) {
+        // Кастомизируем внешний вид каждой точки (возвращаем цифры вместо точек)
+        return '<a class="pagination-dot">' + (index + 1) + '</a>';
+        }
+    }),
+
     // Обработчик клика по году
     $('.year-item').on('click', function() {
         var slideIndex = $(this).data('slide');

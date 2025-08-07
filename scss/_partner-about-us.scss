@@ -115,6 +115,7 @@
         border-color: var(--border-color) !important;
     }
 }
+.slider-pagination,
 .pagination__list {
     display: flex;
     flex-wrap: wrap;
@@ -140,7 +141,22 @@
     }
 
 }
-
+.partner-about-us__grid.slick-slide {
+  display: flex;
+}
+.slick-active {
+  a {
+    border-color: currentColor;
+  }
+}
+.slider-pagination .slick-dots {
+    position: static!important;
+    display: flex;
+  li {
+    width: auto;
+    height: auto;
+  }
+}
 @media (max-width: 767px) {
  .partner-about-us__item {
    flex-direction: column !important;

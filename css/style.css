@@ -4753,11 +4753,13 @@ b, strong, .font-700 {
   border-color: var(--border-color) !important;
 }
 
+.slider-pagination,
 .pagination__list {
   display: flex;
   flex-wrap: wrap;
   gap: max(10px, 1rem);
 }
+.slider-pagination a,
 .pagination__list a {
   display: inline-flex;
   height: 100%;
@@ -4774,8 +4776,27 @@ b, strong, .font-700 {
   border: 1px solid var(--border-color);
   background: transparent;
 }
-.pagination__list a.active, .pagination__list a:hover {
+.slider-pagination a.active, .slider-pagination a:hover,
+.pagination__list a.active,
+.pagination__list a:hover {
   border-color: currentColor;
+}
+
+.partner-about-us__grid.slick-slide {
+  display: flex;
+}
+
+.slick-active a {
+  border-color: currentColor;
+}
+
+.slider-pagination .slick-dots {
+  position: static !important;
+  display: flex;
+}
+.slider-pagination .slick-dots li {
+  width: auto;
+  height: auto;
 }
 
 @media (max-width: 767px) {
