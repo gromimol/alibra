@@ -1666,4 +1666,16 @@
     .main-banner--corporate .main-banner__content__img {
         width: 175px;
     }
+    .main-banner--partner .main-banner__content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .main-banner--partner .main-banner__content__body .description{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .main-banner--partner {
+        margin-top: 0;
+    }
 }
