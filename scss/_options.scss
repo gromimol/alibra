@@ -4,6 +4,11 @@
         grid-template-columns: repeat(4, 1fr);
         gap: max(20px, 3.5rem);
     }
+    &--3-cols {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: max(20px, 3.5rem);
+    }
 
     &__item {
         display: flex;
@@ -21,6 +26,9 @@
     .h3 {
         font-size: max(3.6rem, 16px);
         font-weight: 600;
+        margin-bottom: max(3rem, 20px);
+    }
+    .block-title {
         margin-bottom: max(3rem, 20px);
     }
 }

@@ -186,6 +186,29 @@
             }
         }
     }
+
+    &--students {
+        background: #CBD8DB;
+
+        .main-banner__content {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            min-height: 630px;
+            &__body {
+                .title {
+                    line-height: 1.2;
+                }
+            }
+        }
+        .main-banner__content__img {
+            position: absolute;
+            right: 0rem;
+            width: auto;
+            left: auto;
+            bottom: 0;
+        }
+    }
 }
 
 .page-tab {

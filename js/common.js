@@ -220,6 +220,19 @@ $(document).ready(function() {
         $('.tab-content[data-id="' + tabId + '"]').addClass('active').show();
     });
 
+    // табы для курсов студентов
+    $('.tabs .tab-link').on('click', function(e) {
+        e.preventDefault();
+
+        $('.tabs .tab-link').removeClass('active');
+        $(this).addClass('active');
+        
+        const tabId = $(this).data('tab');
+        
+        $('.tab-content').removeClass('active').hide();
+        $('.tab-content[data-id="' + tabId + '"]').addClass('active').show();
+    });
+
     // Аккордеон
     $('.js--accordeon__title').on('click', function() {
         const accordeonItem = $(this).parent('.js--accordeon-parent');
