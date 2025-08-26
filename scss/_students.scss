@@ -27,9 +27,52 @@
             text-align: center;
         }
     }
+
+    .flag-icon {
+        width: 5.6rem;
+        display: inline-block;
+        img {
+            width: 100%;
+        }
+    }
 }
 .course-title,
 .topic-title {
     font-weight: 600;
     margin-bottom: 0.2em;
+}
+.tab-wrapper,
+.subscription {
+    margin-bottom: max(8rem, 30px);
+}
+.subscription {
+    .block-title {
+        margin-bottom: max(3rem, 20px);
+    }
+}
+.subscription-form {
+    background: #F3F5FD;
+    padding: max(15px, 4rem);
+    gap:max(25px, 9rem);
+    margin: max(4rem, 20px) 0;
+
+    &__left {
+        width: 25%;
+    }
+    &__right {
+        flex-grow: 1;
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: max(10px, 2rem);
+        }
+        .input-wrapper {
+            flex-grow: 1;
+        }
+
+        .agreement {
+            width: 100%;
+            margin: 0;
+        }
+    }
 }
