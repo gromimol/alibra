@@ -8,6 +8,8 @@
 
     &:nth-child(even) {
         background: #F2F2F2;
+        border-left: 1px solid #404041;
+        border-right: 1px solid #404041;
     }
     &:nth-child(odd) {
         border: 1px solid #404041
