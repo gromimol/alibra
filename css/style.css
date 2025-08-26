@@ -1774,6 +1774,9 @@ b, strong, .font-700 {
   left: auto;
   bottom: 0;
 }
+.main-banner--new-client {
+  background: #EBDABE;
+}
 
 .page-tab {
   display: flex;
@@ -5283,6 +5286,51 @@ b, strong, .font-700 {
   margin: 0;
 }
 
+.practice-for-all-level {
+  margin-bottom: max(8rem, 30px);
+}
+.practice-for-all-level .block-title {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.practice__content {
+  background: #D4DBEF;
+  padding: max(3.5rem, 20px);
+  display: flex;
+  justify-content: space-between;
+  font-size: max(2.4rem, 14px);
+}
+.practice__content ul {
+  padding-left: 1em;
+  list-style: disc;
+  display: flex;
+  flex-direction: column;
+  gap: max(10px, 1.5rem);
+}
+.practice__content ul li {
+  list-style: inherit;
+  line-height: 1.4;
+}
+
+.practice__left {
+  width: 50%;
+}
+
+.practice__right {
+  width: 35%;
+}
+
+.practice__badge {
+  display: inline-block;
+  border: 1px solid var(--red);
+  border-radius: max(2rem, 5px);
+  font-weight: 600;
+  line-height: 1;
+  padding: 1.4rem 3rem;
+  margin-bottom: 3rem;
+}
+
 @media (max-width: 1700px) {
   .container {
     max-width: 1400px;
@@ -5395,6 +5443,9 @@ b, strong, .font-700 {
   }
   .main-banner--students .main-banner__content__img {
     right: -4.5rem;
+  }
+  .subscription-form__left .h4 {
+    font-size: max(14px, 1.7rem);
   }
 }
 @media (max-width: 1440px) {
@@ -6882,7 +6933,9 @@ b, strong, .font-700 {
     flex-direction: column;
     width: 100%;
   }
-  .subscription-form__left {
+  .subscription-form__left,
+  .practice__right,
+  .practice__left {
     width: 100%;
   }
   .subscription-form__right .btn {
@@ -6897,6 +6950,17 @@ b, strong, .font-700 {
   .subscription-form__right form {
     max-width: 250px;
     margin: 0 auto;
+  }
+  .practice__content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .practice-for-all-level .block-title {
+    margin-bottom: 20px;
+  }
+  .practice-for-all-level .block-title .red {
+    display: block;
   }
 }
 @media (max-width: 480px) {
