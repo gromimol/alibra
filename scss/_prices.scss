@@ -1,0 +1,386 @@
+.main-banner--prices {
+    background: #F8F2EC;
+    margin-bottom: 0;
+    .main-banner__content {
+        width: 100%;
+        min-height: 630px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-bottom: 10rem;
+
+        .title {
+            line-height: 1.2;
+        }
+    }
+    .main-banner__content__body {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 3rem;
+        top: 3rem;
+
+        .description {
+            width: 90%;
+
+        }
+    }
+    .main-banner__content__img {
+        position: relative;
+        right: auto;
+        left: auto;
+        width: auto;
+        max-height: 490px;
+    }
+}
+
+.price-option {
+    margin: max(30px, 6rem) 0;
+
+    .block-title {
+        margin-bottom: max(20px, 4rem);
+    }
+
+    &-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: max(15px, 3rem);
+
+        &__item {
+            flex: 1 1 450px;
+            max-width: 100%;
+            padding: max(20px, 4rem);
+            font-size: max(14px, 2.4rem);
+            font-weight: 600;
+            text-align: center;
+            min-height: 12rem;
+            box-shadow: 3px 7px 15px rgba(0, 0, 0, 0.2);
+            border-radius: max(10px, 2rem);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1.2;
+        }
+    }
+}
+
+.price-features {
+    .block-title {
+        margin-bottom: max(20px, 4rem);
+    }
+}
+.price-features__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: max(15px, 3rem);
+}
+.price-features__item {
+    border-radius: max(10px, 2.4rem);
+    padding: max(15px, 2rem);
+
+    &--full {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 5rem;
+
+        img {
+            border-radius: max(10px, 2.4rem);
+        }
+    }
+
+    &--half {
+        width: calc(50% - max(7px, 1.5rem));
+        padding-bottom: 0;
+
+        &:has(.price-features__image--short) {
+            padding-bottom: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .price-features__item__content {
+            display: flex;
+            gap: 15px;
+
+            p {
+                flex: 1;
+                .app-icons {
+                    display: flex;
+                    gap: max(10px, 2rem);
+                    margin-top: max(10px, 2rem);
+                }
+            }
+            .price-features__image {
+                &--half {
+                    width: 50%;
+                    position: relative;
+                    left: max(15px, 2rem);
+                    bottom: -3px;
+                }
+
+                &--short {
+                    width: 35%;
+                }
+            }
+        }
+    }
+
+    .h4 {
+        font-weight: 600;
+        margin-bottom: 0.5em;
+    }
+    p {
+        font-size: max(14px, 2rem);
+        line-height: 1.3;
+    }
+}
+.price-features__item__group {
+    display: flex;
+    gap: max(15px, 3rem);
+
+    &__left {
+        width: 30%;
+        .price-features__item  {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 10px;
+             img {
+                border-radius: max(10px, 2.4rem);
+                width: 100%;
+             }
+        }
+    }
+
+    &__right {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: max(15px, 3rem);
+    }
+}
+
+.how-do-price {
+    margin: max(30px, 6rem) 0;
+
+    .block-title {
+        margin-bottom: max(20px, 4rem);
+    }
+}
+
+// сравнение цен
+.price-comparison-wrapper {
+    padding: max(30px, 7.7rem) 0;
+
+    .block-title {
+        margin-bottom: max(20px, 4rem);
+    }   
+}
+.price-comparison + .price-comparison {
+    margin-top: 3rem;
+}
+.price-comparison {
+  display: grid;
+  grid-template-columns: 40% 1fr 1fr;
+  gap: 3rem;
+}
+
+// Колонка с названиями слева
+.price-comparison__labels {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.price-comparison__labels-header {
+  margin-bottom: 0;
+}
+
+.price-comparison__label-item {
+  font-size: 2rem;
+  font-weight: 600;
+    height: 7rem;
+    display: flex;
+    align-items: center;
+  border-bottom: 1px solid #D4DBEF;
+  display: flex;
+  align-items: center;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.price-comparison__labels-footer {
+  height: auto;
+}
+
+// Колонки с тарифами
+.price-comparison__column {
+  border-radius: max(10px, 2.4rem);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  
+  &--group {
+    background-color: #EDF8F9;
+  }
+  
+  &--individual {
+    background-color: #FDF3FF;
+  }
+}
+
+.price-comparison__header {
+  padding: 4rem 3rem 2rem;
+  text-align: center;
+  padding: 1.5rem 2rem;
+
+  &__title {
+    margin-bottom: 2rem;
+    border-radius: max(10px, 2.4rem);
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: max(15px, 3rem);
+
+    .price-comparison__column--group & {
+        background-color: #CCEBF2;
+    }
+    
+    .price-comparison__column--individual & {
+        background-color: #E6DAF4;
+    }
+  }
+}
+
+.price-comparison__label {
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+.price-comparison__title {
+  font-size: 2rem;
+  font-weight: 600;
+  
+  .price-comparison__column--group & {
+    color: var(--red);
+  }
+  
+  .price-comparison__column--individual & {
+    color: var(--red);
+  }
+}
+
+.price-comparison__price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem;
+  padding: 0 1rem;
+  white-space: nowrap;
+}
+
+.price-comparison__old-price {
+  font-size: 2rem;
+  text-decoration: line-through;
+  color: #000;
+  white-space: nowrap;
+}
+
+.price-comparison__new-price {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--red);
+}
+
+.price-comparison__discount {
+  background-color: var(--red);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 400;
+  position: relative;
+  left: 3rem;
+  height: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  padding: 4px 10px 4px 3px;
+  b {
+    display: block;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: calc(100% - 1px);
+    width: 0;
+    height: 0;
+    border: 2.5rem solid transparent;
+    border-right-color: var(--red);
+    z-index: 1;
+  }
+}
+
+.price-comparison__features {
+  padding: 0 3rem;
+}
+
+.price-comparison__feature {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  height: 7rem;
+  border-bottom: 1px solid #D4DBEF;
+  position: relative;
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.price-comparison__icon {
+  width: 4rem;
+  height: 4rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
+  
+  &--check {
+    background-image: url('data:image/svg+xml;charset=UTF-8,%3csvg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"%3e%3cg clip-path="url(%23clip0_1445_217)"%3e%3cpath d="M40 20.0087C40 29.6458 33.1788 37.6913 24.1189 39.5802C22.7897 39.8601 21.408 40 20.0087 40C8.95496 40 0 31.045 0 20.0087C0 8.97245 8.95496 0 20.0087 0C31.0625 0 39.5977 8.55269 40 19.2567C40 19.5015 40 19.7639 40 20.0087Z" fill="%2378B652"/%3e%3cg style="mix-blend-mode:multiply"%3e%3cpath d="M39.9973 20.0085C39.9973 29.6456 33.1761 37.691 24.1162 39.58L20.4783 35.942L14.5316 29.9779L7.50056 22.9468C6.22377 21.67 6.22377 19.6062 7.50056 18.3294C7.57052 18.2595 7.65797 18.172 7.74542 18.1021C9.0222 17.0526 10.9111 17.1226 12.118 18.3294L16.8403 23.0518L28.0165 11.8756C28.0165 11.8756 28.1739 11.7181 28.2614 11.6482C29.5382 10.5988 31.4446 10.6687 32.6339 11.8756C32.6339 11.8756 36.4992 15.7409 39.9973 19.2389C39.9973 19.4838 39.9973 19.7461 39.9973 19.991V20.0085Z" fill="%23C1C1C0"/%3e%3c/g%3e%3cpath d="M32.6183 11.8756C31.3415 10.5988 29.2777 10.5988 28.0009 11.8756L16.8247 23.0518L12.1023 18.3294C10.8256 17.0526 8.76171 17.0526 7.48493 18.3294C6.20815 19.6062 6.20815 21.67 7.48493 22.9468L14.516 29.9779C15.1281 30.59 15.9502 30.9398 16.8247 30.9398C17.6992 30.9398 18.5212 30.59 19.1334 29.9779L32.6183 16.493C33.8951 15.2162 33.8951 13.1523 32.6183 11.8756Z" fill="white"/%3e%3c/g%3e%3cdefs%3e%3cclipPath id="clip0_1445_217"%3e%3crect width="40" height="40" fill="white"/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e');
+  }
+  
+  &--cross {
+    background-image: url('data:image/svg+xml;charset=UTF-8,%3csvg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"%3e%3cg clip-path="url(%23clip0_1445_313)"%3e%3cpath d="M40 20.0087C40 31.0625 31.045 40.0175 19.9913 40.0175C18.8019 40.0175 17.6476 39.9125 16.5282 39.7202C7.13599 38.0586 0 29.8732 0 20.0087C0 8.95496 8.95496 0 20.0087 0C29.8732 0 38.0761 7.13599 39.7027 16.5282C39.8951 17.6476 40 18.8194 40 19.9913V20.0087Z" fill="%2359595B"/%3e%3cg style="mix-blend-mode:multiply"%3e%3cpath d="M40.0019 20.0077C40.0019 31.0615 31.0469 40.0164 19.9931 40.0164C18.8038 40.0164 17.6494 39.9115 16.5301 39.7191C12.9446 36.1336 8.88685 32.0759 8.4496 31.6386C8.4496 31.6386 8.43211 31.6212 8.41462 31.6037C7.13784 30.3269 7.13784 28.263 8.41462 26.9863L15.3757 20.0252L8.41462 13.0466C7.13784 11.7698 7.13784 9.70599 8.41462 8.4292C8.50207 8.34175 8.60701 8.2543 8.71195 8.16685C8.78191 8.11438 8.85187 8.06191 8.92183 8.00944C9.00928 7.95697 9.07924 7.9045 9.16669 7.86952C9.20167 7.85203 9.25415 7.81705 9.28913 7.79956C9.3416 7.76458 9.39407 7.74709 9.44654 7.7296C9.48152 7.7296 9.5165 7.71211 9.55148 7.69462C9.60395 7.67713 9.65642 7.64215 9.70889 7.64215C9.76136 7.64215 9.79634 7.60717 9.84881 7.60717C9.88379 7.60717 9.93626 7.58968 9.97124 7.57219C10.0237 7.57219 10.0762 7.5547 10.1287 7.5372C10.1636 7.5372 10.1811 7.5372 10.2161 7.5372C10.2861 7.5372 10.356 7.51972 10.426 7.51972C11.353 7.44975 12.2974 7.74709 13.0145 8.46418L19.9756 15.4253L26.9367 8.46418C26.9367 8.46418 27.1116 8.28928 27.2165 8.21932C27.2865 8.16685 27.374 8.09689 27.4439 8.04442C27.5314 7.99195 27.6188 7.93948 27.7063 7.88701C27.7063 7.88701 27.7412 7.88701 27.7587 7.86952C27.8287 7.83454 27.9161 7.79956 28.0036 7.76458C28.0036 7.76458 28.0036 7.76458 28.0386 7.76458C28.1085 7.7296 28.1785 7.71211 28.266 7.67713C28.3009 7.67713 28.3359 7.65964 28.3709 7.64215C28.4234 7.64215 28.4933 7.60717 28.5633 7.60717C28.6332 7.60717 28.7032 7.57219 28.7907 7.57219C28.8606 7.57219 28.9131 7.5547 28.983 7.5547C29.91 7.48473 30.8545 7.78207 31.5716 8.49916L39.687 16.6146C39.8794 17.734 39.9844 18.9058 39.9844 20.0777L40.0019 20.0077Z" fill="%23C1C1C0"/%3e%3c/g%3e%3cpath d="M31.5872 8.41266C30.3104 7.13588 28.2466 7.13588 26.9698 8.41266L20.0087 15.3737L13.0476 8.41266C11.7709 7.13588 9.70702 7.13588 8.43024 8.41266C7.15346 9.68945 7.15346 11.7533 8.43024 13.0301L15.3913 19.9912L8.43024 26.9522C7.15346 28.229 7.15346 30.2929 8.43024 31.5696C9.05989 32.1993 9.89942 32.5316 10.7389 32.5316C11.5785 32.5316 12.418 32.2168 13.0476 31.5696L20.0087 24.6086L26.9698 31.5696C27.5995 32.1993 28.439 32.5316 29.2785 32.5316C30.118 32.5316 30.9576 32.2168 31.5872 31.5696C32.864 30.2929 32.864 28.229 31.5872 26.9522L24.6261 19.9912L31.5872 13.0301C32.864 11.7533 32.864 9.68945 31.5872 8.41266Z" fill="white"/%3e%3c/g%3e%3cdefs%3e%3cclipPath id="clip0_1445_313"%3e%3crect width="40" height="40" fill="white"/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e');
+  }
+}
+
+.price-comparison__badge {
+  background-color: #4A9FFF;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.price-comparison__footer {
+  padding: 3rem;
+  text-align: center;
+  
+  .btn {
+    width: 100%;
+  }
+}

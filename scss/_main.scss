@@ -145,7 +145,10 @@ b, strong, .font-700{
 	&:hover {
 		opacity: 0.8;
 	}
-
+	&--full {
+		width: 100%;
+		max-width: unset;
+	}
 	&--lg {
 		font-size: 2.6rem;
 		height: 8rem;
