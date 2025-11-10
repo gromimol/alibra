@@ -5691,6 +5691,22 @@ b, strong, .font-700 {
   width: 100%;
 }
 
+.price-comparison__notice {
+  font-size: max(14px, 3rem);
+  line-height: 1.5;
+  margin-top: max(30px, 5rem);
+}
+
+.price-comparison__icon-set {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: max(15px, 3rem);
+}
+.price-comparison__icon-set img {
+  width: 6rem;
+}
+
 @media (max-width: 1700px) {
   .container {
     max-width: 1400px;
