@@ -1926,6 +1926,17 @@
         font-size: 12px;
         font-style: italic;
     }
+    .price-comparison__icon-set {
+        border-radius: 16px;
+        margin-bottom: 30px;
+        padding: 10px 20px;
+    }
+    .price-comparison__icon-set .icons-set img {
+        width: 35px;
+    }
+    .price-comparison__icon-set__title {
+        line-height: 1.3;
+    }
 }
 // 767
 

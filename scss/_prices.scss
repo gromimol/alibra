@@ -198,6 +198,10 @@
 
 .price-comparison__labels-header {
   margin-bottom: 0;
+
+  &--icons {
+    margin-bottom: auto;
+  }
 }
 
 .price-comparison__label-item {
@@ -392,11 +396,25 @@
 }
 .price-comparison__icon-set {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: flex-start;
+  background: #EAEAEA;
+  border-radius: 25px;
   gap: max(15px, 3rem);
+  padding: max(10px, 2rem);
 
-  & img {
-    width: 6rem;
+  .icons-set {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: max(15px, 3rem);
+
+    & img {
+    width: 5.5rem;
   }
+  }
+}
+.price-comparison__icon-set__title {
+  font-size: max(14px, 2rem);
+  font-weight: 500;
 }
